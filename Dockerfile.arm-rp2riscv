@@ -1,0 +1,39 @@
+FROM debian:bookworm-slim as build
+
+RUN apt update \
+    && apt install -y \
+      git autoconf automake autotools-dev \
+      curl python3 libmpc-dev libmpfr-dev libgmp-dev gawk \
+      build-essential bison flex texinfo gperf libtool \
+      patchutils bc zlib1g-dev libexpat-dev
+
+RUN git clone -b "2024.09.03" --depth=1 -c advice.detachedHead=false --recursive https://github.com/riscv/riscv-gnu-toolchain
+RUN git clone -b "releases/gcc-14" --depth=1 -c advice.detachedHead=false "https://github.com/gcc-mirror/gcc" /git_gcc
+
+WORKDIR /riscv-gnu-toolchain
+RUN ./configure \
+      --prefix=/opt/riscv \
+      --with-gcc-src=/git_gcc \
+      --with-arch=rv32ima_zicsr_zifencei_zba_zbb_zbs_zbkb_zca_zcb \
+      --with-multilib-generator="rv32ima_zicsr_zifencei_zba_zbb_zbs_zbkb_zca_zcb-ilp32--;rv32imac_zicsr_zifencei_zba_zbb_zbs_zbkb-ilp32--" \
+      --with-abi=ilp32
+RUN make -j $(nproc)
+
+FROM debian:bookworm-slim
+
+ENV RISCV=/opt/riscv
+ENV PATH=$RISCV/bin:$PATH
+
+# Requirements for ARM
+RUN apt update \
+    && apt install -y \
+      gcc-arm-none-eabi \
+      build-essential \
+      git \
+      cmake \
+      python3-usb \
+    && apt-get clean
+
+# Requirements for RP2350 RISC-V
+COPY --from=build /opt/riscv /opt/riscv
+RUN cd /opt/riscv/bin && ln /opt/riscv/bin/riscv32-unknown-elf-gcc pico_riscv_gcc
