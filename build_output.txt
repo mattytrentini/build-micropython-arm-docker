@@ -1,0 +1,748 @@
+524.6   else \
+524.6     exit 1; \
+524.6   fi; \
+524.6       else true; \
+524.6       fi; \
+524.6     fi; \
+524.6   done; \
+524.6 fi
+524.6 make[6]: Entering directory '/riscv-gnu-toolchain/build-newlib/riscv32-unknown-elf/rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32/libgloss'
+524.6 make  all-recursive
+524.7 make[7]: Entering directory '/riscv-gnu-toolchain/build-newlib/riscv32-unknown-elf/rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32/libgloss'
+524.7 Making all in .
+524.7 make[8]: Entering directory '/riscv-gnu-toolchain/build-newlib/riscv32-unknown-elf/rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32/libgloss'
+524.7 true  DO=all multi-do # make
+524.7 make[8]: Leaving directory '/riscv-gnu-toolchain/build-newlib/riscv32-unknown-elf/rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32/libgloss'
+524.7 make[7]: Leaving directory '/riscv-gnu-toolchain/build-newlib/riscv32-unknown-elf/rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32/libgloss'
+524.7 make[6]: Leaving directory '/riscv-gnu-toolchain/build-newlib/riscv32-unknown-elf/rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32/libgloss'
+524.7 make[5]: Leaving directory '/riscv-gnu-toolchain/build-newlib/riscv32-unknown-elf/libgloss'
+524.7 make[5]: Entering directory '/riscv-gnu-toolchain/build-newlib/riscv32-unknown-elf/libgloss'
+524.7 make  DO=install multi-do # make
+524.7  /usr/bin/mkdir -p '/opt/riscv/riscv32-unknown-elf/include/machine'
+524.7  /usr/bin/mkdir -p '/opt/riscv/riscv32-unknown-elf/lib'
+524.7  /usr/bin/mkdir -p '/opt/riscv/share/info'
+524.7  /usr/bin/install -c -m 644 /riscv-gnu-toolchain/newlib/libgloss/doc/porting.info '/opt/riscv/share/info'
+524.7  /usr/bin/mkdir -p '/opt/riscv/riscv32-unknown-elf/lib'
+524.8 make[6]: Entering directory '/riscv-gnu-toolchain/build-newlib/riscv32-unknown-elf/libgloss'
+524.8 if [ -z "rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32" ]; then \
+524.8   true; \
+524.8 else \
+524.8   rootpre=`${PWDCMD-pwd}`/; export rootpre; \
+524.8   srcrootpre=`cd /riscv-gnu-toolchain/newlib/libgloss; ${PWDCMD-pwd}`/; export srcrootpre; \
+524.8   lib=`echo "${rootpre}" | sed -e 's,^.*/\([^/][^/]*\)/$,\1,'`; \
+524.8   compiler="riscv32-unknown-elf-gcc -B/riscv-gnu-toolchain/build-newlib/riscv32-unknown-elf/newlib/ -isystem /riscv-gnu-toolchain/build-newlib/riscv32-unknown-elf/newlib/targ-include -isystem /riscv-gnu-toolchain/newlib/newlib/libc/include -B/riscv-gnu-toolchain/build-newlib/riscv32-unknown-elf/libgloss/riscv32 -L/riscv-gnu-toolchain/build-newlib/riscv32-unknown-elf/libgloss/libnosys -L/riscv-gnu-toolchain/newlib/libgloss/riscv32   "; \
+524.8   for i in `${compiler} --print-multi-lib 2>/dev/null`; do \
+524.8     dir=`echo $i | sed -e 's/;.*$//'`; \
+524.8     if [ "${dir}" = "." ]; then \
+524.8       true; \
+524.8     else \
+524.8       if [ -d ../${dir}/${lib} ]; then \
+524.8   flags=`echo $i | sed -e 's/^[^;]*;//' -e 's/@/ -/g'`; \
+524.8   if (cd ../${dir}/${lib}; make "CC=riscv32-unknown-elf-gcc -B/riscv-gnu-toolchain/build-newlib/riscv32-unknown-elf/newlib/ -isystem /riscv-gnu-toolchain/build-newlib/riscv32-unknown-elf/newlib/targ-include -isystem /riscv-gnu-toolchain/newlib/newlib/libc/include -B/riscv-gnu-toolchain/build-newlib/riscv32-unknown-elf/libgloss/riscv32 -L/riscv-gnu-toolchain/build-newlib/riscv32-unknown-elf/libgloss/libnosys -L/riscv-gnu-toolchain/newlib/libgloss/riscv32   " "CFLAGS=-O2 -D_POSIX_MODE -ffunction-sections -fdata-sections    -mcmodel=medlow" "CFLAGS_FOR_TARGET=-O2 -D_POSIX_MODE -ffunction-sections -fdata-sections    -mcmodel=medlow" "CCASFLAGS=-O2 -D_POSIX_MODE -ffunction-sections -fdata-sections    -mcmodel=medlow" "AR=riscv32-unknown-elf-ar" "RANLIB=riscv32-unknown-elf-ranlib" "AR_FLAGS=rc" "MAKEINFO=makeinfo --split-size=5000000 --split-size=5000000" "AS=riscv32-unknown-elf-as" "LD=riscv32-unknown-elf-ld" "TARGET_CFLAGS=" "exec_prefix=/opt/riscv" "prefix=/opt/riscv" "tooldir=/opt/riscv/riscv32-unknown-elf" "infodir=/opt/riscv/share/info" "libdir=/opt/riscv/lib" "top_toollibdir=" "INSTALL=/usr/bin/install -c" "INSTALL_PROGRAM=/usr/bin/install -c" "INSTALL_DATA=/usr/bin/install -c -m 644" "DESTDIR=" \
+524.8                   CFLAGS="-O2 -D_POSIX_MODE -ffunction-sections -fdata-sections    -mcmodel=medlow ${flags}" \
+524.8                   CCASFLAGS="-O2 -D_POSIX_MODE -ffunction-sections -fdata-sections    -mcmodel=medlow ${flags}" \
+524.8                   FCFLAGS=" ${flags}" \
+524.8                   FFLAGS=" ${flags}" \
+524.8                   ADAFLAGS=" ${flags}" \
+524.8                   prefix="/opt/riscv" \
+524.8                   exec_prefix="/opt/riscv" \
+524.8                   GCJFLAGS=" ${flags}" \
+524.8                   GOCFLAGS="-O2 -g ${flags}" \
+524.8                   CXXFLAGS="-O2 -D_POSIX_MODE -ffunction-sections -fdata-sections    -mcmodel=medlow ${flags}" \
+524.8                   LIBCFLAGS="-O2 -D_POSIX_MODE -ffunction-sections -fdata-sections    -mcmodel=medlow ${flags}" \
+524.8                   LIBCXXFLAGS="-O2 -D_POSIX_MODE -ffunction-sections -fdata-sections    -mcmodel=medlow -fno-implicit-templates ${flags}" \
+524.8                   LDFLAGS=" ${flags}" \
+524.8                   MULTIFLAGS="${flags}" \
+524.8                   DESTDIR="" \
+524.8                   INSTALL="/usr/bin/install -c" \
+524.8                   INSTALL_DATA="/usr/bin/install -c -m 644" \
+524.8                   INSTALL_PROGRAM="/usr/bin/install -c" \
+524.8                   INSTALL_SCRIPT="/usr/bin/install -c" \
+524.8                   install); then \
+524.8     true; \
+524.8   else \
+524.8     exit 1; \
+524.8   fi; \
+524.8       else true; \
+524.8       fi; \
+524.8     fi; \
+524.8   done; \
+524.8 fi
+524.8 make[7]: Entering directory '/riscv-gnu-toolchain/build-newlib/riscv32-unknown-elf/rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32/libgloss'
+524.8 Making install in .
+524.8 make[8]: Entering directory '/riscv-gnu-toolchain/build-newlib/riscv32-unknown-elf/rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32/libgloss'
+524.8 true  DO=all multi-do # make
+524.9 make[9]: Entering directory '/riscv-gnu-toolchain/build-newlib/riscv32-unknown-elf/rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32/libgloss'
+524.9 true  DO=install multi-do # make
+524.9  /usr/bin/mkdir -p '/opt/riscv/riscv32-unknown-elf/include/machine'
+524.9  /usr/bin/mkdir -p '/opt/riscv/riscv32-unknown-elf/lib/rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32'
+524.9  /usr/bin/mkdir -p '/opt/riscv/share/info'
+524.9  /usr/bin/mkdir -p '/opt/riscv/riscv32-unknown-elf/lib/rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32'
+524.9  /usr/bin/install -c -m 644 /riscv-gnu-toolchain/newlib/libgloss/doc/porting.info '/opt/riscv/share/info'
+524.9 make[3]: Entering directory '/riscv-gnu-toolchain/build-newlib/riscv32-unknown-elf/newlib'
+524.9 make[4]: Entering directory '/riscv-gnu-toolchain/build-newlib-nano/riscv32-unknown-elf/newlib'
+524.9 if [ -z "rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32" ]; then \
+524.9   true; \
+524.9 else \
+524.9   rootpre=`${PWDCMD-pwd}`/; export rootpre; \
+524.9   srcrootpre=`cd /riscv-gnu-toolchain/newlib/newlib; ${PWDCMD-pwd}`/; export srcrootpre; \
+524.9   lib=`echo "${rootpre}" | sed -e 's,^.*/\([^/][^/]*\)/$,\1,'`; \
+524.9   compiler="riscv32-unknown-elf-gcc -B/riscv-gnu-toolchain/build-newlib-nano/riscv32-unknown-elf/newlib/ -isystem /riscv-gnu-toolchain/build-newlib-nano/riscv32-unknown-elf/newlib/targ-include -isystem /riscv-gnu-toolchain/newlib/newlib/libc/include -B/riscv-gnu-toolchain/build-newlib-nano/riscv32-unknown-elf/libgloss/riscv32 -L/riscv-gnu-toolchain/build-newlib-nano/riscv32-unknown-elf/libgloss/libnosys -L/riscv-gnu-toolchain/newlib/libgloss/riscv32   "; \
+524.9   for i in `${compiler} --print-multi-lib 2>/dev/null`; do \
+524.9     dir=`echo $i | sed -e 's/;.*$//'`; \
+524.9     if [ "${dir}" = "." ]; then \
+524.9       true; \
+524.9     else \
+524.9       if [ -d ../${dir}/${lib} ]; then \
+524.9   flags=`echo $i | sed -e 's/^[^;]*;//' -e 's/@/ -/g'`; \
+524.9   if (cd ../${dir}/${lib}; make "CC_FOR_BUILD=gcc" "CFLAGS=-Os -ffunction-sections -fdata-sections    -mcmodel=medlow" "CCASFLAGS=-Os -ffunction-sections -fdata-sections    -mcmodel=medlow" "CFLAGS_FOR_BUILD=-g -O2" "CFLAGS_FOR_TARGET=-Os -ffunction-sections -fdata-sections    -mcmodel=medlow" "INSTALL=/usr/bin/install -c" "LDFLAGS=" "LIBCFLAGS=-Os -ffunction-sections -fdata-sections    -mcmodel=medlow" "LIBCFLAGS_FOR_TARGET=-Os -ffunction-sections -fdata-sections    -mcmodel=medlow" "MAKE=make" "MAKEINFO=makeinfo --split-size=5000000 --split-size=5000000  " "PICFLAG=" "PICFLAG_FOR_TARGET=" "SHELL=/bin/bash" "EXPECT=expect" "RUNTEST=runtest" "RUNTESTFLAGS=" "exec_prefix=/riscv-gnu-toolchain/install-newlib-nano" "infodir=/riscv-gnu-toolchain/install-newlib-nano/share/info" "libdir=/riscv-gnu-toolchain/install-newlib-nano/lib" "prefix=/riscv-gnu-toolchain/install-newlib-nano" "tooldir=/riscv-gnu-toolchain/install-newlib-nano/riscv32-unknown-elf" "top_toollibdir=/riscv-gnu-toolchain/install-newlib-nano/riscv32-unknown-elf/lib" "AR=riscv32-unknown-elf-ar" "AS=riscv32-unknown-elf-as" "CC=riscv32-unknown-elf-gcc -B/riscv-gnu-toolchain/build-newlib-nano/riscv32-unknown-elf/newlib/ -isystem /riscv-gnu-toolchain/build-newlib-nano/riscv32-unknown-elf/newlib/targ-include -isystem /riscv-gnu-toolchain/newlib/newlib/libc/include -B/riscv-gnu-toolchain/build-newlib-nano/riscv32-unknown-elf/libgloss/riscv32 -L/riscv-gnu-toolchain/build-newlib-nano/riscv32-unknown-elf/libgloss/libnosys -L/riscv-gnu-toolchain/newlib/libgloss/riscv32   " "LD=riscv32-unknown-elf-ld" "LIBCFLAGS=-Os -ffunction-sections -fdata-sections    -mcmodel=medlow" "NM=riscv32-unknown-elf-nm" "PICFLAG=" "RANLIB=riscv32-unknown-elf-ranlib" "DESTDIR=" \
+524.9                   CFLAGS="-Os -ffunction-sections -fdata-sections    -mcmodel=medlow ${flags}" \
+524.9                   CCASFLAGS="-Os -ffunction-sections -fdata-sections    -mcmodel=medlow ${flags}" \
+524.9                   FCFLAGS=" ${flags}" \
+524.9                   FFLAGS=" ${flags}" \
+524.9                   ADAFLAGS=" ${flags}" \
+524.9                   prefix="/riscv-gnu-toolchain/install-newlib-nano" \
+524.9                   exec_prefix="/riscv-gnu-toolchain/install-newlib-nano" \
+524.9                   GCJFLAGS=" ${flags}" \
+524.9                   GOCFLAGS="-O2 -g ${flags}" \
+524.9                   CXXFLAGS="-Os -ffunction-sections -fdata-sections    -mcmodel=medlow ${flags}" \
+524.9                   LIBCFLAGS="-Os -ffunction-sections -fdata-sections    -mcmodel=medlow ${flags}" \
+524.9                   LIBCXXFLAGS="-Os -ffunction-sections -fdata-sections    -mcmodel=medlow -fno-implicit-templates ${flags}" \
+524.9                   LDFLAGS=" ${flags}" \
+524.9                   MULTIFLAGS="${flags}" \
+524.9                   DESTDIR="" \
+524.9                   INSTALL="/usr/bin/install -c" \
+524.9                   INSTALL_DATA="/usr/bin/install -c -m 644" \
+524.9                   INSTALL_PROGRAM="/usr/bin/install -c" \
+524.9                   INSTALL_SCRIPT="/usr/bin/install -c" \
+524.9                   all); then \
+524.9     true; \
+524.9   else \
+524.9     exit 1; \
+524.9   fi; \
+524.9       else true; \
+524.9       fi; \
+524.9     fi; \
+524.9   done; \
+524.9 fi
+524.9  /usr/bin/install -c -m 644  libnosys/libnosys.a riscv/libgloss.a riscv/libsim.a riscv/libsemihost.a '/opt/riscv/riscv32-unknown-elf/lib'
+524.9  /usr/bin/install -c -m 644  libnosys/libnosys.a riscv/libgloss.a riscv/libsim.a riscv/libsemihost.a '/opt/riscv/riscv32-unknown-elf/lib/rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32'
+524.9  /usr/bin/install -c -m 644 /riscv-gnu-toolchain/newlib/libgloss/riscv/machine/syscall.h '/opt/riscv/riscv32-unknown-elf/include/machine'
+524.9  /usr/bin/install -c -m 644 /riscv-gnu-toolchain/newlib/libgloss/libnosys/nosys.specs /riscv-gnu-toolchain/newlib/libgloss/riscv/nano.specs /riscv-gnu-toolchain/newlib/libgloss/riscv/sim.specs /riscv-gnu-toolchain/newlib/libgloss/riscv/semihost.specs riscv/crt0.o '/opt/riscv/riscv32-unknown-elf/lib'
+524.9  /usr/bin/install -c -m 644 /riscv-gnu-toolchain/newlib/libgloss/libnosys/nosys.specs /riscv-gnu-toolchain/newlib/libgloss/riscv/nano.specs /riscv-gnu-toolchain/newlib/libgloss/riscv/sim.specs /riscv-gnu-toolchain/newlib/libgloss/riscv/semihost.specs riscv/crt0.o '/opt/riscv/riscv32-unknown-elf/lib/rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32'
+524.9  /usr/bin/install -c -m 644 /riscv-gnu-toolchain/newlib/libgloss/riscv/machine/syscall.h '/opt/riscv/riscv32-unknown-elf/include/machine'
+524.9 /usr/bin/install: cannot create regular file '/opt/riscv/riscv32-unknown-elf/include/machine/syscall.h': File exists
+524.9 make[5]: *** [Makefile:4864: install-includemachinetoolDATA] Error 1
+524.9 make[5]: *** Waiting for unfinished jobs....
+524.9  ( cd '/opt/riscv/riscv32-unknown-elf/lib' && riscv32-unknown-elf-ranlib libnosys.a )
+524.9  ( cd '/opt/riscv/riscv32-unknown-elf/lib/rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32' && riscv32-unknown-elf-ranlib libnosys.a )
+524.9 make "CC_FOR_BUILD=gcc" "CFLAGS=-O2 -D_POSIX_MODE -ffunction-sections -fdata-sections    -mcmodel=medlow" "CCASFLAGS=-O2 -D_POSIX_MODE -ffunction-sections -fdata-sections    -mcmodel=medlow" "CFLAGS_FOR_BUILD=-g -O2" "CFLAGS_FOR_TARGET=-O2 -D_POSIX_MODE -ffunction-sections -fdata-sections    -mcmodel=medlow" "INSTALL=/usr/bin/install -c" "LDFLAGS=" "LIBCFLAGS=-O2 -D_POSIX_MODE -ffunction-sections -fdata-sections    -mcmodel=medlow" "LIBCFLAGS_FOR_TARGET=-O2 -D_POSIX_MODE -ffunction-sections -fdata-sections    -mcmodel=medlow" "MAKE=make" "MAKEINFO=makeinfo --split-size=5000000 --split-size=5000000 " "PICFLAG=" "PICFLAG_FOR_TARGET=" "SHELL=/bin/bash" "EXPECT=expect" "RUNTEST=runtest" "RUNTESTFLAGS=" "exec_prefix=/opt/riscv" "infodir=/opt/riscv/share/info" "libdir=/opt/riscv/lib" "prefix=/opt/riscv" "tooldir=/opt/riscv/riscv32-unknown-elf" "top_toollibdir=/opt/riscv/riscv32-unknown-elf/lib" "AR=riscv32-unknown-elf-ar" "AS=riscv32-unknown-elf-as" "CC=riscv32-unknown-elf-gcc -B/riscv-gnu-toolchain/build-newlib/riscv32-unknown-elf/newlib/ -isystem /riscv-gnu-toolchain/build-newlib/riscv32-unknown-elf/newlib/targ-include -isystem /riscv-gnu-toolchain/newlib/newlib/libc/include -B/riscv-gnu-toolchain/build-newlib/riscv32-unknown-elf/libgloss/riscv32 -L/riscv-gnu-toolchain/build-newlib/riscv32-unknown-elf/libgloss/libnosys -L/riscv-gnu-toolchain/newlib/libgloss/riscv32   " "LD=riscv32-unknown-elf-ld" "LIBCFLAGS=-O2 -D_POSIX_MODE -ffunction-sections -fdata-sections    -mcmodel=medlow" "NM=riscv32-unknown-elf-nm" "PICFLAG=" "RANLIB=riscv32-unknown-elf-ranlib" "DESTDIR=" DO=all multi-do # make
+525.0  ( cd '/opt/riscv/riscv32-unknown-elf/lib' && riscv32-unknown-elf-ranlib libgloss.a )
+525.0  ( cd '/opt/riscv/riscv32-unknown-elf/lib/rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32' && riscv32-unknown-elf-ranlib libgloss.a )
+525.0  ( cd '/opt/riscv/riscv32-unknown-elf/lib/rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32' && riscv32-unknown-elf-ranlib libsim.a )
+525.0  ( cd '/opt/riscv/riscv32-unknown-elf/lib' && riscv32-unknown-elf-ranlib libsim.a )
+525.0  ( cd '/opt/riscv/riscv32-unknown-elf/lib' && riscv32-unknown-elf-ranlib libsemihost.a )
+525.0  ( cd '/opt/riscv/riscv32-unknown-elf/lib/rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32' && riscv32-unknown-elf-ranlib libsemihost.a )
+525.0 make[9]: Leaving directory '/riscv-gnu-toolchain/build-newlib/riscv32-unknown-elf/rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32/libgloss'
+525.0 make[8]: Leaving directory '/riscv-gnu-toolchain/build-newlib/riscv32-unknown-elf/rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32/libgloss'
+525.0 make[7]: Leaving directory '/riscv-gnu-toolchain/build-newlib/riscv32-unknown-elf/rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32/libgloss'
+525.0 make[6]: Leaving directory '/riscv-gnu-toolchain/build-newlib/riscv32-unknown-elf/libgloss'
+525.0 make[5]: Leaving directory '/riscv-gnu-toolchain/build-newlib/riscv32-unknown-elf/libgloss'
+525.0 make[4]: *** [Makefile:5068: install-am] Error 2
+525.0 make[4]: Leaving directory '/riscv-gnu-toolchain/build-newlib/riscv32-unknown-elf/libgloss'
+525.0 make[3]: *** [Makefile:4954: install-recursive] Error 1
+525.0 make[3]: Leaving directory '/riscv-gnu-toolchain/build-newlib/riscv32-unknown-elf/libgloss'
+525.0 make[2]: *** [Makefile:9553: install-target-libgloss] Error 2
+525.0 make[2]: *** Waiting for unfinished jobs....
+525.3 make[5]: Entering directory '/riscv-gnu-toolchain/build-newlib-nano/riscv32-unknown-elf/rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32/newlib'
+525.3 make "CC_FOR_BUILD=gcc" "CFLAGS=-Os -ffunction-sections -fdata-sections    -mcmodel=medlow  -march=rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs -mabi=ilp32" "CCASFLAGS=-Os -ffunction-sections -fdata-sections    -mcmodel=medlow  -march=rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs -mabi=ilp32" "CFLAGS_FOR_BUILD=-g -O2" "CFLAGS_FOR_TARGET=-Os -ffunction-sections -fdata-sections    -mcmodel=medlow" "INSTALL=/usr/bin/install -c" "LDFLAGS=-march=rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs -mabi=ilp32" "LIBCFLAGS=-Os -ffunction-sections -fdata-sections    -mcmodel=medlow  -march=rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs -mabi=ilp32" "LIBCFLAGS_FOR_TARGET=-Os -ffunction-sections -fdata-sections    -mcmodel=medlow" "MAKE=make" "MAKEINFO=makeinfo --split-size=5000000 --split-size=5000000   " "PICFLAG=" "PICFLAG_FOR_TARGET=" "SHELL=/bin/bash" "EXPECT=expect" "RUNTEST=runtest" "RUNTESTFLAGS=" "exec_prefix=/riscv-gnu-toolchain/install-newlib-nano" "infodir=/riscv-gnu-toolchain/install-newlib-nano/share/info" "libdir=/riscv-gnu-toolchain/install-newlib-nano/lib" "prefix=/riscv-gnu-toolchain/install-newlib-nano" "tooldir=/riscv-gnu-toolchain/install-newlib-nano/riscv32-unknown-elf" "top_toollibdir=/riscv-gnu-toolchain/install-newlib-nano/riscv32-unknown-elf/lib/rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32" "AR=riscv32-unknown-elf-ar" "AS=riscv32-unknown-elf-as" "CC=riscv32-unknown-elf-gcc -B/riscv-gnu-toolchain/build-newlib-nano/riscv32-unknown-elf/rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32/newlib/ -isystem /riscv-gnu-toolchain/build-newlib-nano/riscv32-unknown-elf/rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32/newlib/targ-include -isystem /riscv-gnu-toolchain/newlib/newlib/libc/include -B/riscv-gnu-toolchain/build-newlib-nano/riscv32-unknown-elf/rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32/libgloss/riscv32 -L/riscv-gnu-toolchain/build-newlib-nano/riscv32-unknown-elf/rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32/libgloss/libnosys -L/riscv-gnu-toolchain/newlib/libgloss/riscv32  -march=rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs -mabi=ilp32" "LD=riscv32-unknown-elf-ld" "LIBCFLAGS=-Os -ffunction-sections -fdata-sections    -mcmodel=medlow  -march=rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs -mabi=ilp32" "NM=riscv32-unknown-elf-nm" "PICFLAG=" "RANLIB=riscv32-unknown-elf-ranlib" "DESTDIR=" all-am
+525.3 make[4]: Entering directory '/riscv-gnu-toolchain/build-newlib/riscv32-unknown-elf/newlib'
+525.3 if [ -z "rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32" ]; then \
+525.3   true; \
+525.3 else \
+525.3   rootpre=`${PWDCMD-pwd}`/; export rootpre; \
+525.3   srcrootpre=`cd /riscv-gnu-toolchain/newlib/newlib; ${PWDCMD-pwd}`/; export srcrootpre; \
+525.3   lib=`echo "${rootpre}" | sed -e 's,^.*/\([^/][^/]*\)/$,\1,'`; \
+525.3   compiler="riscv32-unknown-elf-gcc -B/riscv-gnu-toolchain/build-newlib/riscv32-unknown-elf/newlib/ -isystem /riscv-gnu-toolchain/build-newlib/riscv32-unknown-elf/newlib/targ-include -isystem /riscv-gnu-toolchain/newlib/newlib/libc/include -B/riscv-gnu-toolchain/build-newlib/riscv32-unknown-elf/libgloss/riscv32 -L/riscv-gnu-toolchain/build-newlib/riscv32-unknown-elf/libgloss/libnosys -L/riscv-gnu-toolchain/newlib/libgloss/riscv32   "; \
+525.3   for i in `${compiler} --print-multi-lib 2>/dev/null`; do \
+525.3     dir=`echo $i | sed -e 's/;.*$//'`; \
+525.3     if [ "${dir}" = "." ]; then \
+525.3       true; \
+525.3     else \
+525.3       if [ -d ../${dir}/${lib} ]; then \
+525.3   flags=`echo $i | sed -e 's/^[^;]*;//' -e 's/@/ -/g'`; \
+525.3   if (cd ../${dir}/${lib}; make "CC_FOR_BUILD=gcc" "CFLAGS=-O2 -D_POSIX_MODE -ffunction-sections -fdata-sections    -mcmodel=medlow" "CCASFLAGS=-O2 -D_POSIX_MODE -ffunction-sections -fdata-sections    -mcmodel=medlow" "CFLAGS_FOR_BUILD=-g -O2" "CFLAGS_FOR_TARGET=-O2 -D_POSIX_MODE -ffunction-sections -fdata-sections    -mcmodel=medlow" "INSTALL=/usr/bin/install -c" "LDFLAGS=" "LIBCFLAGS=-O2 -D_POSIX_MODE -ffunction-sections -fdata-sections    -mcmodel=medlow" "LIBCFLAGS_FOR_TARGET=-O2 -D_POSIX_MODE -ffunction-sections -fdata-sections    -mcmodel=medlow" "MAKE=make" "MAKEINFO=makeinfo --split-size=5000000 --split-size=5000000  " "PICFLAG=" "PICFLAG_FOR_TARGET=" "SHELL=/bin/bash" "EXPECT=expect" "RUNTEST=runtest" "RUNTESTFLAGS=" "exec_prefix=/opt/riscv" "infodir=/opt/riscv/share/info" "libdir=/opt/riscv/lib" "prefix=/opt/riscv" "tooldir=/opt/riscv/riscv32-unknown-elf" "top_toollibdir=/opt/riscv/riscv32-unknown-elf/lib" "AR=riscv32-unknown-elf-ar" "AS=riscv32-unknown-elf-as" "CC=riscv32-unknown-elf-gcc -B/riscv-gnu-toolchain/build-newlib/riscv32-unknown-elf/newlib/ -isystem /riscv-gnu-toolchain/build-newlib/riscv32-unknown-elf/newlib/targ-include -isystem /riscv-gnu-toolchain/newlib/newlib/libc/include -B/riscv-gnu-toolchain/build-newlib/riscv32-unknown-elf/libgloss/riscv32 -L/riscv-gnu-toolchain/build-newlib/riscv32-unknown-elf/libgloss/libnosys -L/riscv-gnu-toolchain/newlib/libgloss/riscv32   " "LD=riscv32-unknown-elf-ld" "LIBCFLAGS=-O2 -D_POSIX_MODE -ffunction-sections -fdata-sections    -mcmodel=medlow" "NM=riscv32-unknown-elf-nm" "PICFLAG=" "RANLIB=riscv32-unknown-elf-ranlib" "DESTDIR=" \
+525.3                   CFLAGS="-O2 -D_POSIX_MODE -ffunction-sections -fdata-sections    -mcmodel=medlow ${flags}" \
+525.3                   CCASFLAGS="-O2 -D_POSIX_MODE -ffunction-sections -fdata-sections    -mcmodel=medlow ${flags}" \
+525.3                   FCFLAGS=" ${flags}" \
+525.3                   FFLAGS=" ${flags}" \
+525.3                   ADAFLAGS=" ${flags}" \
+525.3                   prefix="/opt/riscv" \
+525.3                   exec_prefix="/opt/riscv" \
+525.3                   GCJFLAGS=" ${flags}" \
+525.3                   GOCFLAGS="-O2 -g ${flags}" \
+525.3                   CXXFLAGS="-O2 -D_POSIX_MODE -ffunction-sections -fdata-sections    -mcmodel=medlow ${flags}" \
+525.3                   LIBCFLAGS="-O2 -D_POSIX_MODE -ffunction-sections -fdata-sections    -mcmodel=medlow ${flags}" \
+525.3                   LIBCXXFLAGS="-O2 -D_POSIX_MODE -ffunction-sections -fdata-sections    -mcmodel=medlow -fno-implicit-templates ${flags}" \
+525.3                   LDFLAGS=" ${flags}" \
+525.3                   MULTIFLAGS="${flags}" \
+525.3                   DESTDIR="" \
+525.3                   INSTALL="/usr/bin/install -c" \
+525.3                   INSTALL_DATA="/usr/bin/install -c -m 644" \
+525.3                   INSTALL_PROGRAM="/usr/bin/install -c" \
+525.3                   INSTALL_SCRIPT="/usr/bin/install -c" \
+525.3                   all); then \
+525.3     true; \
+525.3   else \
+525.3     exit 1; \
+525.3   fi; \
+525.3       else true; \
+525.3       fi; \
+525.3     fi; \
+525.3   done; \
+525.3 fi
+525.7 make[6]: Entering directory '/riscv-gnu-toolchain/build-newlib-nano/riscv32-unknown-elf/rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32/newlib'
+525.7 make[5]: Entering directory '/riscv-gnu-toolchain/build-newlib/riscv32-unknown-elf/rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32/newlib'
+525.7 make "CC_FOR_BUILD=gcc" "CFLAGS=-O2 -D_POSIX_MODE -ffunction-sections -fdata-sections    -mcmodel=medlow  -march=rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs -mabi=ilp32" "CCASFLAGS=-O2 -D_POSIX_MODE -ffunction-sections -fdata-sections    -mcmodel=medlow  -march=rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs -mabi=ilp32" "CFLAGS_FOR_BUILD=-g -O2" "CFLAGS_FOR_TARGET=-O2 -D_POSIX_MODE -ffunction-sections -fdata-sections    -mcmodel=medlow" "INSTALL=/usr/bin/install -c" "LDFLAGS=-march=rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs -mabi=ilp32" "LIBCFLAGS=-O2 -D_POSIX_MODE -ffunction-sections -fdata-sections    -mcmodel=medlow  -march=rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs -mabi=ilp32" "LIBCFLAGS_FOR_TARGET=-O2 -D_POSIX_MODE -ffunction-sections -fdata-sections    -mcmodel=medlow" "MAKE=make" "MAKEINFO=makeinfo --split-size=5000000 --split-size=5000000   " "PICFLAG=" "PICFLAG_FOR_TARGET=" "SHELL=/bin/bash" "EXPECT=expect" "RUNTEST=runtest" "RUNTESTFLAGS=" "exec_prefix=/opt/riscv" "infodir=/opt/riscv/share/info" "libdir=/opt/riscv/lib" "prefix=/opt/riscv" "tooldir=/opt/riscv/riscv32-unknown-elf" "top_toollibdir=/opt/riscv/riscv32-unknown-elf/lib/rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32" "AR=riscv32-unknown-elf-ar" "AS=riscv32-unknown-elf-as" "CC=riscv32-unknown-elf-gcc -B/riscv-gnu-toolchain/build-newlib/riscv32-unknown-elf/rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32/newlib/ -isystem /riscv-gnu-toolchain/build-newlib/riscv32-unknown-elf/rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32/newlib/targ-include -isystem /riscv-gnu-toolchain/newlib/newlib/libc/include -B/riscv-gnu-toolchain/build-newlib/riscv32-unknown-elf/rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32/libgloss/riscv32 -L/riscv-gnu-toolchain/build-newlib/riscv32-unknown-elf/rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32/libgloss/libnosys -L/riscv-gnu-toolchain/newlib/libgloss/riscv32  -march=rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs -mabi=ilp32" "LD=riscv32-unknown-elf-ld" "LIBCFLAGS=-O2 -D_POSIX_MODE -ffunction-sections -fdata-sections    -mcmodel=medlow  -march=rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs -mabi=ilp32" "NM=riscv32-unknown-elf-nm" "PICFLAG=" "RANLIB=riscv32-unknown-elf-ranlib" "DESTDIR=" all-am
+525.7 true "CC_FOR_BUILD=gcc" "CFLAGS=-Os -ffunction-sections -fdata-sections    -mcmodel=medlow  -march=rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs -mabi=ilp32" "CCASFLAGS=-Os -ffunction-sections -fdata-sections    -mcmodel=medlow  -march=rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs -mabi=ilp32" "CFLAGS_FOR_BUILD=-g -O2" "CFLAGS_FOR_TARGET=-Os -ffunction-sections -fdata-sections    -mcmodel=medlow" "INSTALL=/usr/bin/install -c" "LDFLAGS=-march=rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs -mabi=ilp32" "LIBCFLAGS=-Os -ffunction-sections -fdata-sections    -mcmodel=medlow  -march=rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs -mabi=ilp32" "LIBCFLAGS_FOR_TARGET=-Os -ffunction-sections -fdata-sections    -mcmodel=medlow" "MAKE=make" "MAKEINFO=makeinfo --split-size=5000000 --split-size=5000000    " "PICFLAG=" "PICFLAG_FOR_TARGET=" "SHELL=/bin/bash" "EXPECT=expect" "RUNTEST=runtest" "RUNTESTFLAGS=" "exec_prefix=/riscv-gnu-toolchain/install-newlib-nano" "infodir=/riscv-gnu-toolchain/install-newlib-nano/share/info" "libdir=/riscv-gnu-toolchain/install-newlib-nano/lib" "prefix=/riscv-gnu-toolchain/install-newlib-nano" "tooldir=/riscv-gnu-toolchain/install-newlib-nano/riscv32-unknown-elf" "top_toollibdir=/riscv-gnu-toolchain/install-newlib-nano/riscv32-unknown-elf/lib/rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32" "AR=riscv32-unknown-elf-ar" "AS=riscv32-unknown-elf-as" "CC=riscv32-unknown-elf-gcc -B/riscv-gnu-toolchain/build-newlib-nano/riscv32-unknown-elf/rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32/newlib/ -isystem /riscv-gnu-toolchain/build-newlib-nano/riscv32-unknown-elf/rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32/newlib/targ-include -isystem /riscv-gnu-toolchain/newlib/newlib/libc/include -B/riscv-gnu-toolchain/build-newlib-nano/riscv32-unknown-elf/rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32/libgloss/riscv32 -L/riscv-gnu-toolchain/build-newlib-nano/riscv32-unknown-elf/rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32/libgloss/libnosys -L/riscv-gnu-toolchain/newlib/libgloss/riscv32  -march=rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs -mabi=ilp32" "LD=riscv32-unknown-elf-ld" "LIBCFLAGS=-Os -ffunction-sections -fdata-sections    -mcmodel=medlow  -march=rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs -mabi=ilp32" "NM=riscv32-unknown-elf-nm" "PICFLAG=" "RANLIB=riscv32-unknown-elf-ranlib" "DESTDIR=" DO=all multi-do # make
+525.7   GEN      rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32/libc.a
+525.7   GEN      rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32/libm.a
+525.7 make[6]: Leaving directory '/riscv-gnu-toolchain/build-newlib-nano/riscv32-unknown-elf/rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32/newlib'
+525.7 make[5]: Leaving directory '/riscv-gnu-toolchain/build-newlib-nano/riscv32-unknown-elf/rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32/newlib'
+525.7 make[4]: Leaving directory '/riscv-gnu-toolchain/build-newlib-nano/riscv32-unknown-elf/newlib'
+526.1 make[6]: Entering directory '/riscv-gnu-toolchain/build-newlib/riscv32-unknown-elf/rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32/newlib'
+526.1 make[4]: Entering directory '/riscv-gnu-toolchain/build-newlib-nano/riscv32-unknown-elf/newlib'
+526.1 make "CC_FOR_BUILD=gcc" "CFLAGS=-Os -ffunction-sections -fdata-sections    -mcmodel=medlow" "CCASFLAGS=-Os -ffunction-sections -fdata-sections    -mcmodel=medlow" "CFLAGS_FOR_BUILD=-g -O2" "CFLAGS_FOR_TARGET=-Os -ffunction-sections -fdata-sections    -mcmodel=medlow" "INSTALL=/usr/bin/install -c" "LDFLAGS=" "LIBCFLAGS=-Os -ffunction-sections -fdata-sections    -mcmodel=medlow" "LIBCFLAGS_FOR_TARGET=-Os -ffunction-sections -fdata-sections    -mcmodel=medlow" "MAKE=make" "MAKEINFO=makeinfo --split-size=5000000 --split-size=5000000  " "PICFLAG=" "PICFLAG_FOR_TARGET=" "SHELL=/bin/bash" "EXPECT=expect" "RUNTEST=runtest" "RUNTESTFLAGS=" "exec_prefix=/riscv-gnu-toolchain/install-newlib-nano" "infodir=/riscv-gnu-toolchain/install-newlib-nano/share/info" "libdir=/riscv-gnu-toolchain/install-newlib-nano/lib" "prefix=/riscv-gnu-toolchain/install-newlib-nano" "tooldir=/riscv-gnu-toolchain/install-newlib-nano/riscv32-unknown-elf" "top_toollibdir=/riscv-gnu-toolchain/install-newlib-nano/riscv32-unknown-elf/lib" "AR=riscv32-unknown-elf-ar" "AS=riscv32-unknown-elf-as" "CC=riscv32-unknown-elf-gcc -B/riscv-gnu-toolchain/build-newlib-nano/riscv32-unknown-elf/newlib/ -isystem /riscv-gnu-toolchain/build-newlib-nano/riscv32-unknown-elf/newlib/targ-include -isystem /riscv-gnu-toolchain/newlib/newlib/libc/include -B/riscv-gnu-toolchain/build-newlib-nano/riscv32-unknown-elf/libgloss/riscv32 -L/riscv-gnu-toolchain/build-newlib-nano/riscv32-unknown-elf/libgloss/libnosys -L/riscv-gnu-toolchain/newlib/libgloss/riscv32   " "LD=riscv32-unknown-elf-ld" "LIBCFLAGS=-Os -ffunction-sections -fdata-sections    -mcmodel=medlow" "NM=riscv32-unknown-elf-nm" "PICFLAG=" "RANLIB=riscv32-unknown-elf-ranlib" "DESTDIR=" DO=install multi-do # make
+526.1 true "CC_FOR_BUILD=gcc" "CFLAGS=-O2 -D_POSIX_MODE -ffunction-sections -fdata-sections    -mcmodel=medlow  -march=rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs -mabi=ilp32" "CCASFLAGS=-O2 -D_POSIX_MODE -ffunction-sections -fdata-sections    -mcmodel=medlow  -march=rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs -mabi=ilp32" "CFLAGS_FOR_BUILD=-g -O2" "CFLAGS_FOR_TARGET=-O2 -D_POSIX_MODE -ffunction-sections -fdata-sections    -mcmodel=medlow" "INSTALL=/usr/bin/install -c" "LDFLAGS=-march=rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs -mabi=ilp32" "LIBCFLAGS=-O2 -D_POSIX_MODE -ffunction-sections -fdata-sections    -mcmodel=medlow  -march=rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs -mabi=ilp32" "LIBCFLAGS_FOR_TARGET=-O2 -D_POSIX_MODE -ffunction-sections -fdata-sections    -mcmodel=medlow" "MAKE=make" "MAKEINFO=makeinfo --split-size=5000000 --split-size=5000000    " "PICFLAG=" "PICFLAG_FOR_TARGET=" "SHELL=/bin/bash" "EXPECT=expect" "RUNTEST=runtest" "RUNTESTFLAGS=" "exec_prefix=/opt/riscv" "infodir=/opt/riscv/share/info" "libdir=/opt/riscv/lib" "prefix=/opt/riscv" "tooldir=/opt/riscv/riscv32-unknown-elf" "top_toollibdir=/opt/riscv/riscv32-unknown-elf/lib/rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32" "AR=riscv32-unknown-elf-ar" "AS=riscv32-unknown-elf-as" "CC=riscv32-unknown-elf-gcc -B/riscv-gnu-toolchain/build-newlib/riscv32-unknown-elf/rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32/newlib/ -isystem /riscv-gnu-toolchain/build-newlib/riscv32-unknown-elf/rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32/newlib/targ-include -isystem /riscv-gnu-toolchain/newlib/newlib/libc/include -B/riscv-gnu-toolchain/build-newlib/riscv32-unknown-elf/rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32/libgloss/riscv32 -L/riscv-gnu-toolchain/build-newlib/riscv32-unknown-elf/rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32/libgloss/libnosys -L/riscv-gnu-toolchain/newlib/libgloss/riscv32  -march=rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs -mabi=ilp32" "LD=riscv32-unknown-elf-ld" "LIBCFLAGS=-O2 -D_POSIX_MODE -ffunction-sections -fdata-sections    -mcmodel=medlow  -march=rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs -mabi=ilp32" "NM=riscv32-unknown-elf-nm" "PICFLAG=" "RANLIB=riscv32-unknown-elf-ranlib" "DESTDIR=" DO=all multi-do # make
+526.1   GEN      rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32/libc.a
+526.1   GEN      rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32/libm.a
+526.1 make[6]: Leaving directory '/riscv-gnu-toolchain/build-newlib/riscv32-unknown-elf/rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32/newlib'
+526.1 make[5]: Leaving directory '/riscv-gnu-toolchain/build-newlib/riscv32-unknown-elf/rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32/newlib'
+526.1 make[4]: Leaving directory '/riscv-gnu-toolchain/build-newlib/riscv32-unknown-elf/newlib'
+526.2  /usr/bin/mkdir -p '/riscv-gnu-toolchain/install-newlib-nano/riscv32-unknown-elf/lib'
+526.2  /usr/bin/mkdir -p '/riscv-gnu-toolchain/install-newlib-nano/riscv32-unknown-elf/lib'
+526.2  /usr/bin/install -c -m 644  libm.a libc.a '/riscv-gnu-toolchain/install-newlib-nano/riscv32-unknown-elf/lib'
+526.2  ( cd '/riscv-gnu-toolchain/install-newlib-nano/riscv32-unknown-elf/lib' && riscv32-unknown-elf-ranlib libm.a )
+526.2  ( cd '/riscv-gnu-toolchain/install-newlib-nano/riscv32-unknown-elf/lib' && riscv32-unknown-elf-ranlib libc.a )
+526.5 make[5]: Entering directory '/riscv-gnu-toolchain/build-newlib-nano/riscv32-unknown-elf/newlib'
+526.5 if [ -z "rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32" ]; then \
+526.5   true; \
+526.5 else \
+526.5   rootpre=`${PWDCMD-pwd}`/; export rootpre; \
+526.5   srcrootpre=`cd /riscv-gnu-toolchain/newlib/newlib; ${PWDCMD-pwd}`/; export srcrootpre; \
+526.5   lib=`echo "${rootpre}" | sed -e 's,^.*/\([^/][^/]*\)/$,\1,'`; \
+526.5   compiler="riscv32-unknown-elf-gcc -B/riscv-gnu-toolchain/build-newlib-nano/riscv32-unknown-elf/newlib/ -isystem /riscv-gnu-toolchain/build-newlib-nano/riscv32-unknown-elf/newlib/targ-include -isystem /riscv-gnu-toolchain/newlib/newlib/libc/include -B/riscv-gnu-toolchain/build-newlib-nano/riscv32-unknown-elf/libgloss/riscv32 -L/riscv-gnu-toolchain/build-newlib-nano/riscv32-unknown-elf/libgloss/libnosys -L/riscv-gnu-toolchain/newlib/libgloss/riscv32   "; \
+526.5   for i in `${compiler} --print-multi-lib 2>/dev/null`; do \
+526.5     dir=`echo $i | sed -e 's/;.*$//'`; \
+526.5     if [ "${dir}" = "." ]; then \
+526.5       true; \
+526.5     else \
+526.5       if [ -d ../${dir}/${lib} ]; then \
+526.5   flags=`echo $i | sed -e 's/^[^;]*;//' -e 's/@/ -/g'`; \
+526.5   if (cd ../${dir}/${lib}; make "CC_FOR_BUILD=gcc" "CFLAGS=-Os -ffunction-sections -fdata-sections    -mcmodel=medlow" "CCASFLAGS=-Os -ffunction-sections -fdata-sections    -mcmodel=medlow" "CFLAGS_FOR_BUILD=-g -O2" "CFLAGS_FOR_TARGET=-Os -ffunction-sections -fdata-sections    -mcmodel=medlow" "INSTALL=/usr/bin/install -c" "LDFLAGS=" "LIBCFLAGS=-Os -ffunction-sections -fdata-sections    -mcmodel=medlow" "LIBCFLAGS_FOR_TARGET=-Os -ffunction-sections -fdata-sections    -mcmodel=medlow" "MAKE=make" "MAKEINFO=makeinfo --split-size=5000000 --split-size=5000000   " "PICFLAG=" "PICFLAG_FOR_TARGET=" "SHELL=/bin/bash" "EXPECT=expect" "RUNTEST=runtest" "RUNTESTFLAGS=" "exec_prefix=/riscv-gnu-toolchain/install-newlib-nano" "infodir=/riscv-gnu-toolchain/install-newlib-nano/share/info" "libdir=/riscv-gnu-toolchain/install-newlib-nano/lib" "prefix=/riscv-gnu-toolchain/install-newlib-nano" "tooldir=/riscv-gnu-toolchain/install-newlib-nano/riscv32-unknown-elf" "top_toollibdir=/riscv-gnu-toolchain/install-newlib-nano/riscv32-unknown-elf/lib" "AR=riscv32-unknown-elf-ar" "AS=riscv32-unknown-elf-as" "CC=riscv32-unknown-elf-gcc -B/riscv-gnu-toolchain/build-newlib-nano/riscv32-unknown-elf/newlib/ -isystem /riscv-gnu-toolchain/build-newlib-nano/riscv32-unknown-elf/newlib/targ-include -isystem /riscv-gnu-toolchain/newlib/newlib/libc/include -B/riscv-gnu-toolchain/build-newlib-nano/riscv32-unknown-elf/libgloss/riscv32 -L/riscv-gnu-toolchain/build-newlib-nano/riscv32-unknown-elf/libgloss/libnosys -L/riscv-gnu-toolchain/newlib/libgloss/riscv32   " "LD=riscv32-unknown-elf-ld" "LIBCFLAGS=-Os -ffunction-sections -fdata-sections    -mcmodel=medlow" "NM=riscv32-unknown-elf-nm" "PICFLAG=" "RANLIB=riscv32-unknown-elf-ranlib" "DESTDIR=" \
+526.5                   CFLAGS="-Os -ffunction-sections -fdata-sections    -mcmodel=medlow ${flags}" \
+526.5                   CCASFLAGS="-Os -ffunction-sections -fdata-sections    -mcmodel=medlow ${flags}" \
+526.5                   FCFLAGS=" ${flags}" \
+526.5                   FFLAGS=" ${flags}" \
+526.5                   ADAFLAGS=" ${flags}" \
+526.5                   prefix="/riscv-gnu-toolchain/install-newlib-nano" \
+526.5                   exec_prefix="/riscv-gnu-toolchain/install-newlib-nano" \
+526.5                   GCJFLAGS=" ${flags}" \
+526.5                   GOCFLAGS="-O2 -g ${flags}" \
+526.5                   CXXFLAGS="-Os -ffunction-sections -fdata-sections    -mcmodel=medlow ${flags}" \
+526.5                   LIBCFLAGS="-Os -ffunction-sections -fdata-sections    -mcmodel=medlow ${flags}" \
+526.5                   LIBCXXFLAGS="-Os -ffunction-sections -fdata-sections    -mcmodel=medlow -fno-implicit-templates ${flags}" \
+526.5                   LDFLAGS=" ${flags}" \
+526.5                   MULTIFLAGS="${flags}" \
+526.5                   DESTDIR="" \
+526.5                   INSTALL="/usr/bin/install -c" \
+526.5                   INSTALL_DATA="/usr/bin/install -c -m 644" \
+526.5                   INSTALL_PROGRAM="/usr/bin/install -c" \
+526.5                   INSTALL_SCRIPT="/usr/bin/install -c" \
+526.5                   install); then \
+526.5     true; \
+526.5   else \
+526.5     exit 1; \
+526.5   fi; \
+526.5       else true; \
+526.5       fi; \
+526.5     fi; \
+526.5   done; \
+526.5 fi
+526.5 make[4]: Entering directory '/riscv-gnu-toolchain/build-newlib/riscv32-unknown-elf/newlib'
+526.5 make "CC_FOR_BUILD=gcc" "CFLAGS=-O2 -D_POSIX_MODE -ffunction-sections -fdata-sections    -mcmodel=medlow" "CCASFLAGS=-O2 -D_POSIX_MODE -ffunction-sections -fdata-sections    -mcmodel=medlow" "CFLAGS_FOR_BUILD=-g -O2" "CFLAGS_FOR_TARGET=-O2 -D_POSIX_MODE -ffunction-sections -fdata-sections    -mcmodel=medlow" "INSTALL=/usr/bin/install -c" "LDFLAGS=" "LIBCFLAGS=-O2 -D_POSIX_MODE -ffunction-sections -fdata-sections    -mcmodel=medlow" "LIBCFLAGS_FOR_TARGET=-O2 -D_POSIX_MODE -ffunction-sections -fdata-sections    -mcmodel=medlow" "MAKE=make" "MAKEINFO=makeinfo --split-size=5000000 --split-size=5000000  " "PICFLAG=" "PICFLAG_FOR_TARGET=" "SHELL=/bin/bash" "EXPECT=expect" "RUNTEST=runtest" "RUNTESTFLAGS=" "exec_prefix=/opt/riscv" "infodir=/opt/riscv/share/info" "libdir=/opt/riscv/lib" "prefix=/opt/riscv" "tooldir=/opt/riscv/riscv32-unknown-elf" "top_toollibdir=/opt/riscv/riscv32-unknown-elf/lib" "AR=riscv32-unknown-elf-ar" "AS=riscv32-unknown-elf-as" "CC=riscv32-unknown-elf-gcc -B/riscv-gnu-toolchain/build-newlib/riscv32-unknown-elf/newlib/ -isystem /riscv-gnu-toolchain/build-newlib/riscv32-unknown-elf/newlib/targ-include -isystem /riscv-gnu-toolchain/newlib/newlib/libc/include -B/riscv-gnu-toolchain/build-newlib/riscv32-unknown-elf/libgloss/riscv32 -L/riscv-gnu-toolchain/build-newlib/riscv32-unknown-elf/libgloss/libnosys -L/riscv-gnu-toolchain/newlib/libgloss/riscv32   " "LD=riscv32-unknown-elf-ld" "LIBCFLAGS=-O2 -D_POSIX_MODE -ffunction-sections -fdata-sections    -mcmodel=medlow" "NM=riscv32-unknown-elf-nm" "PICFLAG=" "RANLIB=riscv32-unknown-elf-ranlib" "DESTDIR=" DO=install multi-do # make
+526.6  /usr/bin/mkdir -p '/opt/riscv/riscv32-unknown-elf/lib'
+526.6  /usr/bin/mkdir -p '/opt/riscv/riscv32-unknown-elf/lib'
+526.6  /usr/bin/install -c -m 644  libm.a libc.a '/opt/riscv/riscv32-unknown-elf/lib'
+526.6  ( cd '/opt/riscv/riscv32-unknown-elf/lib' && riscv32-unknown-elf-ranlib libm.a )
+526.6  ( cd '/opt/riscv/riscv32-unknown-elf/lib' && riscv32-unknown-elf-ranlib libc.a )
+526.9 make[6]: Entering directory '/riscv-gnu-toolchain/build-newlib-nano/riscv32-unknown-elf/rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32/newlib'
+526.9 make[5]: Entering directory '/riscv-gnu-toolchain/build-newlib/riscv32-unknown-elf/newlib'
+526.9 if [ -z "rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32" ]; then \
+526.9   true; \
+526.9 else \
+526.9   rootpre=`${PWDCMD-pwd}`/; export rootpre; \
+526.9   srcrootpre=`cd /riscv-gnu-toolchain/newlib/newlib; ${PWDCMD-pwd}`/; export srcrootpre; \
+526.9   lib=`echo "${rootpre}" | sed -e 's,^.*/\([^/][^/]*\)/$,\1,'`; \
+526.9   compiler="riscv32-unknown-elf-gcc -B/riscv-gnu-toolchain/build-newlib/riscv32-unknown-elf/newlib/ -isystem /riscv-gnu-toolchain/build-newlib/riscv32-unknown-elf/newlib/targ-include -isystem /riscv-gnu-toolchain/newlib/newlib/libc/include -B/riscv-gnu-toolchain/build-newlib/riscv32-unknown-elf/libgloss/riscv32 -L/riscv-gnu-toolchain/build-newlib/riscv32-unknown-elf/libgloss/libnosys -L/riscv-gnu-toolchain/newlib/libgloss/riscv32   "; \
+526.9   for i in `${compiler} --print-multi-lib 2>/dev/null`; do \
+526.9     dir=`echo $i | sed -e 's/;.*$//'`; \
+526.9     if [ "${dir}" = "." ]; then \
+526.9       true; \
+526.9     else \
+526.9       if [ -d ../${dir}/${lib} ]; then \
+526.9   flags=`echo $i | sed -e 's/^[^;]*;//' -e 's/@/ -/g'`; \
+526.9   if (cd ../${dir}/${lib}; make "CC_FOR_BUILD=gcc" "CFLAGS=-O2 -D_POSIX_MODE -ffunction-sections -fdata-sections    -mcmodel=medlow" "CCASFLAGS=-O2 -D_POSIX_MODE -ffunction-sections -fdata-sections    -mcmodel=medlow" "CFLAGS_FOR_BUILD=-g -O2" "CFLAGS_FOR_TARGET=-O2 -D_POSIX_MODE -ffunction-sections -fdata-sections    -mcmodel=medlow" "INSTALL=/usr/bin/install -c" "LDFLAGS=" "LIBCFLAGS=-O2 -D_POSIX_MODE -ffunction-sections -fdata-sections    -mcmodel=medlow" "LIBCFLAGS_FOR_TARGET=-O2 -D_POSIX_MODE -ffunction-sections -fdata-sections    -mcmodel=medlow" "MAKE=make" "MAKEINFO=makeinfo --split-size=5000000 --split-size=5000000   " "PICFLAG=" "PICFLAG_FOR_TARGET=" "SHELL=/bin/bash" "EXPECT=expect" "RUNTEST=runtest" "RUNTESTFLAGS=" "exec_prefix=/opt/riscv" "infodir=/opt/riscv/share/info" "libdir=/opt/riscv/lib" "prefix=/opt/riscv" "tooldir=/opt/riscv/riscv32-unknown-elf" "top_toollibdir=/opt/riscv/riscv32-unknown-elf/lib" "AR=riscv32-unknown-elf-ar" "AS=riscv32-unknown-elf-as" "CC=riscv32-unknown-elf-gcc -B/riscv-gnu-toolchain/build-newlib/riscv32-unknown-elf/newlib/ -isystem /riscv-gnu-toolchain/build-newlib/riscv32-unknown-elf/newlib/targ-include -isystem /riscv-gnu-toolchain/newlib/newlib/libc/include -B/riscv-gnu-toolchain/build-newlib/riscv32-unknown-elf/libgloss/riscv32 -L/riscv-gnu-toolchain/build-newlib/riscv32-unknown-elf/libgloss/libnosys -L/riscv-gnu-toolchain/newlib/libgloss/riscv32   " "LD=riscv32-unknown-elf-ld" "LIBCFLAGS=-O2 -D_POSIX_MODE -ffunction-sections -fdata-sections    -mcmodel=medlow" "NM=riscv32-unknown-elf-nm" "PICFLAG=" "RANLIB=riscv32-unknown-elf-ranlib" "DESTDIR=" \
+526.9                   CFLAGS="-O2 -D_POSIX_MODE -ffunction-sections -fdata-sections    -mcmodel=medlow ${flags}" \
+526.9                   CCASFLAGS="-O2 -D_POSIX_MODE -ffunction-sections -fdata-sections    -mcmodel=medlow ${flags}" \
+526.9                   FCFLAGS=" ${flags}" \
+526.9                   FFLAGS=" ${flags}" \
+526.9                   ADAFLAGS=" ${flags}" \
+526.9                   prefix="/opt/riscv" \
+526.9                   exec_prefix="/opt/riscv" \
+526.9                   GCJFLAGS=" ${flags}" \
+526.9                   GOCFLAGS="-O2 -g ${flags}" \
+526.9                   CXXFLAGS="-O2 -D_POSIX_MODE -ffunction-sections -fdata-sections    -mcmodel=medlow ${flags}" \
+526.9                   LIBCFLAGS="-O2 -D_POSIX_MODE -ffunction-sections -fdata-sections    -mcmodel=medlow ${flags}" \
+526.9                   LIBCXXFLAGS="-O2 -D_POSIX_MODE -ffunction-sections -fdata-sections    -mcmodel=medlow -fno-implicit-templates ${flags}" \
+526.9                   LDFLAGS=" ${flags}" \
+526.9                   MULTIFLAGS="${flags}" \
+526.9                   DESTDIR="" \
+526.9                   INSTALL="/usr/bin/install -c" \
+526.9                   INSTALL_DATA="/usr/bin/install -c -m 644" \
+526.9                   INSTALL_PROGRAM="/usr/bin/install -c" \
+526.9                   INSTALL_SCRIPT="/usr/bin/install -c" \
+526.9                   install); then \
+526.9     true; \
+526.9   else \
+526.9     exit 1; \
+526.9   fi; \
+526.9       else true; \
+526.9       fi; \
+526.9     fi; \
+526.9   done; \
+526.9 fi
+526.9 true "CC_FOR_BUILD=gcc" "CFLAGS=-Os -ffunction-sections -fdata-sections    -mcmodel=medlow  -march=rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs -mabi=ilp32" "CCASFLAGS=-Os -ffunction-sections -fdata-sections    -mcmodel=medlow  -march=rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs -mabi=ilp32" "CFLAGS_FOR_BUILD=-g -O2" "CFLAGS_FOR_TARGET=-Os -ffunction-sections -fdata-sections    -mcmodel=medlow" "INSTALL=/usr/bin/install -c" "LDFLAGS=-march=rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs -mabi=ilp32" "LIBCFLAGS=-Os -ffunction-sections -fdata-sections    -mcmodel=medlow  -march=rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs -mabi=ilp32" "LIBCFLAGS_FOR_TARGET=-Os -ffunction-sections -fdata-sections    -mcmodel=medlow" "MAKE=make" "MAKEINFO=makeinfo --split-size=5000000 --split-size=5000000    " "PICFLAG=" "PICFLAG_FOR_TARGET=" "SHELL=/bin/bash" "EXPECT=expect" "RUNTEST=runtest" "RUNTESTFLAGS=" "exec_prefix=/riscv-gnu-toolchain/install-newlib-nano" "infodir=/riscv-gnu-toolchain/install-newlib-nano/share/info" "libdir=/riscv-gnu-toolchain/install-newlib-nano/lib" "prefix=/riscv-gnu-toolchain/install-newlib-nano" "tooldir=/riscv-gnu-toolchain/install-newlib-nano/riscv32-unknown-elf" "top_toollibdir=/riscv-gnu-toolchain/install-newlib-nano/riscv32-unknown-elf/lib/rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32" "AR=riscv32-unknown-elf-ar" "AS=riscv32-unknown-elf-as" "CC=riscv32-unknown-elf-gcc -B/riscv-gnu-toolchain/build-newlib-nano/riscv32-unknown-elf/rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32/newlib/ -isystem /riscv-gnu-toolchain/build-newlib-nano/riscv32-unknown-elf/rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32/newlib/targ-include -isystem /riscv-gnu-toolchain/newlib/newlib/libc/include -B/riscv-gnu-toolchain/build-newlib-nano/riscv32-unknown-elf/rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32/libgloss/riscv32 -L/riscv-gnu-toolchain/build-newlib-nano/riscv32-unknown-elf/rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32/libgloss/libnosys -L/riscv-gnu-toolchain/newlib/libgloss/riscv32  -march=rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs -mabi=ilp32" "LD=riscv32-unknown-elf-ld" "LIBCFLAGS=-Os -ffunction-sections -fdata-sections    -mcmodel=medlow  -march=rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs -mabi=ilp32" "NM=riscv32-unknown-elf-nm" "PICFLAG=" "RANLIB=riscv32-unknown-elf-ranlib" "DESTDIR=" DO=all multi-do # make
+526.9   GEN      rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32/libc.a
+526.9   GEN      rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32/libm.a
+527.2 make[6]: Entering directory '/riscv-gnu-toolchain/build-newlib/riscv32-unknown-elf/rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32/newlib'
+527.3 make[7]: Entering directory '/riscv-gnu-toolchain/build-newlib-nano/riscv32-unknown-elf/rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32/newlib'
+527.3 true "CC_FOR_BUILD=gcc" "CFLAGS=-Os -ffunction-sections -fdata-sections    -mcmodel=medlow  -march=rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs -mabi=ilp32" "CCASFLAGS=-Os -ffunction-sections -fdata-sections    -mcmodel=medlow  -march=rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs -mabi=ilp32" "CFLAGS_FOR_BUILD=-g -O2" "CFLAGS_FOR_TARGET=-Os -ffunction-sections -fdata-sections    -mcmodel=medlow" "INSTALL=/usr/bin/install -c" "LDFLAGS=-march=rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs -mabi=ilp32" "LIBCFLAGS=-Os -ffunction-sections -fdata-sections    -mcmodel=medlow  -march=rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs -mabi=ilp32" "LIBCFLAGS_FOR_TARGET=-Os -ffunction-sections -fdata-sections    -mcmodel=medlow" "MAKE=make" "MAKEINFO=makeinfo --split-size=5000000 --split-size=5000000     " "PICFLAG=" "PICFLAG_FOR_TARGET=" "SHELL=/bin/bash" "EXPECT=expect" "RUNTEST=runtest" "RUNTESTFLAGS=" "exec_prefix=/riscv-gnu-toolchain/install-newlib-nano" "infodir=/riscv-gnu-toolchain/install-newlib-nano/share/info" "libdir=/riscv-gnu-toolchain/install-newlib-nano/lib" "prefix=/riscv-gnu-toolchain/install-newlib-nano" "tooldir=/riscv-gnu-toolchain/install-newlib-nano/riscv32-unknown-elf" "top_toollibdir=/riscv-gnu-toolchain/install-newlib-nano/riscv32-unknown-elf/lib/rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32" "AR=riscv32-unknown-elf-ar" "AS=riscv32-unknown-elf-as" "CC=riscv32-unknown-elf-gcc -B/riscv-gnu-toolchain/build-newlib-nano/riscv32-unknown-elf/rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32/newlib/ -isystem /riscv-gnu-toolchain/build-newlib-nano/riscv32-unknown-elf/rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32/newlib/targ-include -isystem /riscv-gnu-toolchain/newlib/newlib/libc/include -B/riscv-gnu-toolchain/build-newlib-nano/riscv32-unknown-elf/rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32/libgloss/riscv32 -L/riscv-gnu-toolchain/build-newlib-nano/riscv32-unknown-elf/rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32/libgloss/libnosys -L/riscv-gnu-toolchain/newlib/libgloss/riscv32  -march=rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs -mabi=ilp32" "LD=riscv32-unknown-elf-ld" "LIBCFLAGS=-Os -ffunction-sections -fdata-sections    -mcmodel=medlow  -march=rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs -mabi=ilp32" "NM=riscv32-unknown-elf-nm" "PICFLAG=" "RANLIB=riscv32-unknown-elf-ranlib" "DESTDIR=" DO=install multi-do # make
+527.3 true "CC_FOR_BUILD=gcc" "CFLAGS=-O2 -D_POSIX_MODE -ffunction-sections -fdata-sections    -mcmodel=medlow  -march=rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs -mabi=ilp32" "CCASFLAGS=-O2 -D_POSIX_MODE -ffunction-sections -fdata-sections    -mcmodel=medlow  -march=rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs -mabi=ilp32" "CFLAGS_FOR_BUILD=-g -O2" "CFLAGS_FOR_TARGET=-O2 -D_POSIX_MODE -ffunction-sections -fdata-sections    -mcmodel=medlow" "INSTALL=/usr/bin/install -c" "LDFLAGS=-march=rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs -mabi=ilp32" "LIBCFLAGS=-O2 -D_POSIX_MODE -ffunction-sections -fdata-sections    -mcmodel=medlow  -march=rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs -mabi=ilp32" "LIBCFLAGS_FOR_TARGET=-O2 -D_POSIX_MODE -ffunction-sections -fdata-sections    -mcmodel=medlow" "MAKE=make" "MAKEINFO=makeinfo --split-size=5000000 --split-size=5000000    " "PICFLAG=" "PICFLAG_FOR_TARGET=" "SHELL=/bin/bash" "EXPECT=expect" "RUNTEST=runtest" "RUNTESTFLAGS=" "exec_prefix=/opt/riscv" "infodir=/opt/riscv/share/info" "libdir=/opt/riscv/lib" "prefix=/opt/riscv" "tooldir=/opt/riscv/riscv32-unknown-elf" "top_toollibdir=/opt/riscv/riscv32-unknown-elf/lib/rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32" "AR=riscv32-unknown-elf-ar" "AS=riscv32-unknown-elf-as" "CC=riscv32-unknown-elf-gcc -B/riscv-gnu-toolchain/build-newlib/riscv32-unknown-elf/rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32/newlib/ -isystem /riscv-gnu-toolchain/build-newlib/riscv32-unknown-elf/rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32/newlib/targ-include -isystem /riscv-gnu-toolchain/newlib/newlib/libc/include -B/riscv-gnu-toolchain/build-newlib/riscv32-unknown-elf/rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32/libgloss/riscv32 -L/riscv-gnu-toolchain/build-newlib/riscv32-unknown-elf/rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32/libgloss/libnosys -L/riscv-gnu-toolchain/newlib/libgloss/riscv32  -march=rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs -mabi=ilp32" "LD=riscv32-unknown-elf-ld" "LIBCFLAGS=-O2 -D_POSIX_MODE -ffunction-sections -fdata-sections    -mcmodel=medlow  -march=rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs -mabi=ilp32" "NM=riscv32-unknown-elf-nm" "PICFLAG=" "RANLIB=riscv32-unknown-elf-ranlib" "DESTDIR=" DO=all multi-do # make
+527.3   GEN      rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32/libc.a
+527.3   GEN      rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32/libm.a
+527.4  /usr/bin/mkdir -p '/riscv-gnu-toolchain/install-newlib-nano/riscv32-unknown-elf/lib/rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32'
+527.4  /usr/bin/mkdir -p '/riscv-gnu-toolchain/install-newlib-nano/riscv32-unknown-elf/lib/rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32'
+527.4  /usr/bin/install -c -m 644  libm.a libc.a '/riscv-gnu-toolchain/install-newlib-nano/riscv32-unknown-elf/lib/rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32'
+527.4  ( cd '/riscv-gnu-toolchain/install-newlib-nano/riscv32-unknown-elf/lib/rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32' && riscv32-unknown-elf-ranlib libm.a )
+527.4  ( cd '/riscv-gnu-toolchain/install-newlib-nano/riscv32-unknown-elf/lib/rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32' && riscv32-unknown-elf-ranlib libc.a )
+527.5 rm -f /riscv-gnu-toolchain/install-newlib-nano/riscv32-unknown-elf/lib/rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32/libg.a
+527.5 ln /riscv-gnu-toolchain/install-newlib-nano/riscv32-unknown-elf/lib/rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32/libc.a /riscv-gnu-toolchain/install-newlib-nano/riscv32-unknown-elf/lib/rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32/libg.a >/dev/null 2>/dev/null || cp /riscv-gnu-toolchain/install-newlib-nano/riscv32-unknown-elf/lib/rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32/libc.a /riscv-gnu-toolchain/install-newlib-nano/riscv32-unknown-elf/lib/rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32/libg.a
+527.5 if [ -z "/rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32" ]; then \
+527.5   /bin/bash /riscv-gnu-toolchain/newlib/newlib/../mkinstalldirs /riscv-gnu-toolchain/install-newlib-nano/riscv32-unknown-elf/include; \
+527.5   for i in /riscv-gnu-toolchain/newlib/newlib/libc/include/*.h; do \
+527.5    /usr/bin/install -c -m 644 $i /riscv-gnu-toolchain/install-newlib-nano/riscv32-unknown-elf/include/`basename $i`; \
+527.5   done; \
+527.5   /usr/bin/install -c -m 644 newlib.h /riscv-gnu-toolchain/install-newlib-nano/riscv32-unknown-elf/include/newlib.h; \
+527.5   /usr/bin/install -c -m 644 _newlib_version.h /riscv-gnu-toolchain/install-newlib-nano/riscv32-unknown-elf/include/_newlib_version.h; \
+527.5   /bin/bash /riscv-gnu-toolchain/newlib/newlib/../mkinstalldirs /riscv-gnu-toolchain/install-newlib-nano/riscv32-unknown-elf/include/machine; \
+527.5   for i in /riscv-gnu-toolchain/newlib/newlib/libc/include/machine/*.h; do \
+527.5    /usr/bin/install -c -m 644 $i /riscv-gnu-toolchain/install-newlib-nano/riscv32-unknown-elf/include/machine/`basename $i`; \
+527.5   done; \
+527.5   if [ -n "" ]; then \
+527.5     for i in /riscv-gnu-toolchain/newlib/newlib/libc/machine//machine/*.h; do \
+527.5       if [ -f $i ]; then \
+527.5        /usr/bin/install -c -m 644 $i /riscv-gnu-toolchain/install-newlib-nano/riscv32-unknown-elf/include/machine/`basename $i`; \
+527.5       else true; fi ; \
+527.5     done; \
+527.5   fi ; \
+527.5   for i in /riscv-gnu-toolchain/newlib/newlib/libc/machine/riscv/machine/*.h; do \
+527.5     if [ -f $i ]; then \
+527.5      /usr/bin/install -c -m 644 $i /riscv-gnu-toolchain/install-newlib-nano/riscv32-unknown-elf/include/machine/`basename $i`; \
+527.5     else true; fi ; \
+527.5   done; \
+527.5   /bin/bash /riscv-gnu-toolchain/newlib/newlib/../mkinstalldirs /riscv-gnu-toolchain/install-newlib-nano/riscv32-unknown-elf/include/rpc; \
+527.5   for i in /riscv-gnu-toolchain/newlib/newlib/libc/include/rpc/*.h; do \
+527.5    /usr/bin/install -c -m 644 $i /riscv-gnu-toolchain/install-newlib-nano/riscv32-unknown-elf/include/rpc/`basename $i`; \
+527.5   done; \
+527.5   /bin/bash /riscv-gnu-toolchain/newlib/newlib/../mkinstalldirs /riscv-gnu-toolchain/install-newlib-nano/riscv32-unknown-elf/include/ssp; \
+527.5   for i in /riscv-gnu-toolchain/newlib/newlib/libc/include/ssp/*.h; do \
+527.5    /usr/bin/install -c -m 644 $i /riscv-gnu-toolchain/install-newlib-nano/riscv32-unknown-elf/include/ssp/`basename $i`; \
+527.5   done; \
+527.5   /bin/bash /riscv-gnu-toolchain/newlib/newlib/../mkinstalldirs /riscv-gnu-toolchain/install-newlib-nano/riscv32-unknown-elf/include/sys; \
+527.5   for i in /riscv-gnu-toolchain/newlib/newlib/libc/include/sys/*.h; do \
+527.5    /usr/bin/install -c -m 644 $i /riscv-gnu-toolchain/install-newlib-nano/riscv32-unknown-elf/include/sys/`basename $i`; \
+527.5   done; \
+527.5   if [ -n "" ]; then \
+527.5     for i in /riscv-gnu-toolchain/newlib/newlib/libc/machine//sys/*.h; do \
+527.5       if [ -f $i ]; then \
+527.5        /usr/bin/install -c -m 644 $i /riscv-gnu-toolchain/install-newlib-nano/riscv32-unknown-elf/include/sys/`basename $i`; \
+527.5       else true; fi ; \
+527.5     done ; \
+527.5     for i in /riscv-gnu-toolchain/newlib/newlib/libc/machine//include/*.h; do \
+527.5       if [ -f $i ]; then \
+527.5        /usr/bin/install -c -m 644 $i /riscv-gnu-toolchain/install-newlib-nano/riscv32-unknown-elf/include/`basename $i`; \
+527.5       else true; fi ; \
+527.5     done ; \
+527.5   fi ; \
+527.5   for i in /riscv-gnu-toolchain/newlib/newlib/libc/machine/riscv/sys/*.h; do \
+527.5     if [ -f $i ]; then \
+527.5      /usr/bin/install -c -m 644 $i /riscv-gnu-toolchain/install-newlib-nano/riscv32-unknown-elf/include/sys/`basename $i`; \
+527.5     else true; fi ; \
+527.5   done ; \
+527.5   for i in /riscv-gnu-toolchain/newlib/newlib/libc/machine/riscv/include/*.h; do \
+527.5     if [ -f $i ]; then \
+527.5      /usr/bin/install -c -m 644 $i /riscv-gnu-toolchain/install-newlib-nano/riscv32-unknown-elf/include/`basename $i`; \
+527.5     else true; fi ; \
+527.5   done ; \
+527.5   for i in /riscv-gnu-toolchain/newlib/newlib/libc/sys//sys/*.h; do \
+527.5     if [ -f $i ]; then \
+527.5      /usr/bin/install -c -m 644 $i /riscv-gnu-toolchain/install-newlib-nano/riscv32-unknown-elf/include/sys/`basename $i`; \
+527.5     else true; fi ; \
+527.5   done ; \
+527.5   /bin/bash /riscv-gnu-toolchain/newlib/newlib/../mkinstalldirs /riscv-gnu-toolchain/install-newlib-nano/riscv32-unknown-elf/include/bits; \
+527.5   for i in /riscv-gnu-toolchain/newlib/newlib/libc/sys//bits/*.h; do \
+527.5     if [ -f $i ]; then \
+527.5      /usr/bin/install -c -m 644 $i /riscv-gnu-toolchain/install-newlib-nano/riscv32-unknown-elf/include/bits/`basename $i`; \
+527.5     else true; fi ; \
+527.5   done ; \
+527.5   for i in /riscv-gnu-toolchain/newlib/newlib/libc/sys//machine/*.h; do \
+527.5     if [ -f $i ]; then \
+527.5      /usr/bin/install -c -m 644 $i /riscv-gnu-toolchain/install-newlib-nano/riscv32-unknown-elf/include/machine/`basename $i`; \
+527.5     else true; fi ; \
+527.5   done ; \
+527.5   for i in ; do \
+527.5     f=`echo $i | sed s:^/riscv-gnu-toolchain/newlib/newlib/libc/sys//::`; \
+527.5     /usr/bin/mkdir -p /riscv-gnu-toolchain/install-newlib-nano/riscv32-unknown-elf/`dirname $f`; \
+527.5     /usr/bin/install -c -m 644 $i /riscv-gnu-toolchain/install-newlib-nano/riscv32-unknown-elf/`dirname $f`; \
+527.5   done ; \
+527.5   for i in /riscv-gnu-toolchain/newlib/newlib/libc/sys//machine/riscv/include/*.h; do \
+527.5     if [ -f $i ]; then \
+527.5      /usr/bin/install -c -m 644 $i /riscv-gnu-toolchain/install-newlib-nano/riscv32-unknown-elf/include/machine/`basename $i`; \
+527.5     else true; fi ; \
+527.5   done ; \
+527.5   for i in rpc/types.h rpc/xdr.h; do \
+527.5     if [ -f /riscv-gnu-toolchain/install-newlib-nano/riscv32-unknown-elf/include/$i ]; then \
+527.5   rm /riscv-gnu-toolchain/install-newlib-nano/riscv32-unknown-elf/include/$i; \
+527.5     else true; fi ; \
+527.5   done ; \
+527.5 else true; fi
+527.5 make[7]: Leaving directory '/riscv-gnu-toolchain/build-newlib-nano/riscv32-unknown-elf/rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32/newlib'
+527.5 make[6]: Leaving directory '/riscv-gnu-toolchain/build-newlib-nano/riscv32-unknown-elf/rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32/newlib'
+527.5 make[5]: Leaving directory '/riscv-gnu-toolchain/build-newlib-nano/riscv32-unknown-elf/newlib'
+527.5 rm -f /riscv-gnu-toolchain/install-newlib-nano/riscv32-unknown-elf/lib/libg.a
+527.5 ln /riscv-gnu-toolchain/install-newlib-nano/riscv32-unknown-elf/lib/libc.a /riscv-gnu-toolchain/install-newlib-nano/riscv32-unknown-elf/lib/libg.a >/dev/null 2>/dev/null || cp /riscv-gnu-toolchain/install-newlib-nano/riscv32-unknown-elf/lib/libc.a /riscv-gnu-toolchain/install-newlib-nano/riscv32-unknown-elf/lib/libg.a
+527.5 if [ -z "" ]; then \
+527.5   /bin/bash /riscv-gnu-toolchain/newlib/newlib/../mkinstalldirs /riscv-gnu-toolchain/install-newlib-nano/riscv32-unknown-elf/include; \
+527.5   for i in /riscv-gnu-toolchain/newlib/newlib/libc/include/*.h; do \
+527.5    /usr/bin/install -c -m 644 $i /riscv-gnu-toolchain/install-newlib-nano/riscv32-unknown-elf/include/`basename $i`; \
+527.5   done; \
+527.5   /usr/bin/install -c -m 644 newlib.h /riscv-gnu-toolchain/install-newlib-nano/riscv32-unknown-elf/include/newlib.h; \
+527.5   /usr/bin/install -c -m 644 _newlib_version.h /riscv-gnu-toolchain/install-newlib-nano/riscv32-unknown-elf/include/_newlib_version.h; \
+527.5   /bin/bash /riscv-gnu-toolchain/newlib/newlib/../mkinstalldirs /riscv-gnu-toolchain/install-newlib-nano/riscv32-unknown-elf/include/machine; \
+527.5   for i in /riscv-gnu-toolchain/newlib/newlib/libc/include/machine/*.h; do \
+527.5    /usr/bin/install -c -m 644 $i /riscv-gnu-toolchain/install-newlib-nano/riscv32-unknown-elf/include/machine/`basename $i`; \
+527.5   done; \
+527.5   if [ -n "" ]; then \
+527.5     for i in /riscv-gnu-toolchain/newlib/newlib/libc/machine//machine/*.h; do \
+527.5       if [ -f $i ]; then \
+527.5        /usr/bin/install -c -m 644 $i /riscv-gnu-toolchain/install-newlib-nano/riscv32-unknown-elf/include/machine/`basename $i`; \
+527.5       else true; fi ; \
+527.5     done; \
+527.5   fi ; \
+527.5   for i in /riscv-gnu-toolchain/newlib/newlib/libc/machine/riscv/machine/*.h; do \
+527.5     if [ -f $i ]; then \
+527.5      /usr/bin/install -c -m 644 $i /riscv-gnu-toolchain/install-newlib-nano/riscv32-unknown-elf/include/machine/`basename $i`; \
+527.5     else true; fi ; \
+527.5   done; \
+527.5   /bin/bash /riscv-gnu-toolchain/newlib/newlib/../mkinstalldirs /riscv-gnu-toolchain/install-newlib-nano/riscv32-unknown-elf/include/rpc; \
+527.5   for i in /riscv-gnu-toolchain/newlib/newlib/libc/include/rpc/*.h; do \
+527.5    /usr/bin/install -c -m 644 $i /riscv-gnu-toolchain/install-newlib-nano/riscv32-unknown-elf/include/rpc/`basename $i`; \
+527.5   done; \
+527.5   /bin/bash /riscv-gnu-toolchain/newlib/newlib/../mkinstalldirs /riscv-gnu-toolchain/install-newlib-nano/riscv32-unknown-elf/include/ssp; \
+527.5   for i in /riscv-gnu-toolchain/newlib/newlib/libc/include/ssp/*.h; do \
+527.5    /usr/bin/install -c -m 644 $i /riscv-gnu-toolchain/install-newlib-nano/riscv32-unknown-elf/include/ssp/`basename $i`; \
+527.5   done; \
+527.5   /bin/bash /riscv-gnu-toolchain/newlib/newlib/../mkinstalldirs /riscv-gnu-toolchain/install-newlib-nano/riscv32-unknown-elf/include/sys; \
+527.5   for i in /riscv-gnu-toolchain/newlib/newlib/libc/include/sys/*.h; do \
+527.5    /usr/bin/install -c -m 644 $i /riscv-gnu-toolchain/install-newlib-nano/riscv32-unknown-elf/include/sys/`basename $i`; \
+527.5   done; \
+527.5   if [ -n "" ]; then \
+527.5     for i in /riscv-gnu-toolchain/newlib/newlib/libc/machine//sys/*.h; do \
+527.5       if [ -f $i ]; then \
+527.5        /usr/bin/install -c -m 644 $i /riscv-gnu-toolchain/install-newlib-nano/riscv32-unknown-elf/include/sys/`basename $i`; \
+527.5       else true; fi ; \
+527.5     done ; \
+527.5     for i in /riscv-gnu-toolchain/newlib/newlib/libc/machine//include/*.h; do \
+527.5       if [ -f $i ]; then \
+527.5        /usr/bin/install -c -m 644 $i /riscv-gnu-toolchain/install-newlib-nano/riscv32-unknown-elf/include/`basename $i`; \
+527.5       else true; fi ; \
+527.5     done ; \
+527.5   fi ; \
+527.5   for i in /riscv-gnu-toolchain/newlib/newlib/libc/machine/riscv/sys/*.h; do \
+527.5     if [ -f $i ]; then \
+527.5      /usr/bin/install -c -m 644 $i /riscv-gnu-toolchain/install-newlib-nano/riscv32-unknown-elf/include/sys/`basename $i`; \
+527.5     else true; fi ; \
+527.5   done ; \
+527.5   for i in /riscv-gnu-toolchain/newlib/newlib/libc/machine/riscv/include/*.h; do \
+527.5     if [ -f $i ]; then \
+527.5      /usr/bin/install -c -m 644 $i /riscv-gnu-toolchain/install-newlib-nano/riscv32-unknown-elf/include/`basename $i`; \
+527.5     else true; fi ; \
+527.5   done ; \
+527.5   for i in /riscv-gnu-toolchain/newlib/newlib/libc/sys//sys/*.h; do \
+527.5     if [ -f $i ]; then \
+527.5      /usr/bin/install -c -m 644 $i /riscv-gnu-toolchain/install-newlib-nano/riscv32-unknown-elf/include/sys/`basename $i`; \
+527.5     else true; fi ; \
+527.5   done ; \
+527.5   /bin/bash /riscv-gnu-toolchain/newlib/newlib/../mkinstalldirs /riscv-gnu-toolchain/install-newlib-nano/riscv32-unknown-elf/include/bits; \
+527.5   for i in /riscv-gnu-toolchain/newlib/newlib/libc/sys//bits/*.h; do \
+527.5     if [ -f $i ]; then \
+527.5      /usr/bin/install -c -m 644 $i /riscv-gnu-toolchain/install-newlib-nano/riscv32-unknown-elf/include/bits/`basename $i`; \
+527.5     else true; fi ; \
+527.5   done ; \
+527.5   for i in /riscv-gnu-toolchain/newlib/newlib/libc/sys//machine/*.h; do \
+527.5     if [ -f $i ]; then \
+527.5      /usr/bin/install -c -m 644 $i /riscv-gnu-toolchain/install-newlib-nano/riscv32-unknown-elf/include/machine/`basename $i`; \
+527.5     else true; fi ; \
+527.5   done ; \
+527.5   for i in ; do \
+527.5     f=`echo $i | sed s:^/riscv-gnu-toolchain/newlib/newlib/libc/sys//::`; \
+527.5     /usr/bin/mkdir -p /riscv-gnu-toolchain/install-newlib-nano/riscv32-unknown-elf/`dirname $f`; \
+527.5     /usr/bin/install -c -m 644 $i /riscv-gnu-toolchain/install-newlib-nano/riscv32-unknown-elf/`dirname $f`; \
+527.5   done ; \
+527.5   for i in /riscv-gnu-toolchain/newlib/newlib/libc/sys//machine/riscv/include/*.h; do \
+527.5     if [ -f $i ]; then \
+527.5      /usr/bin/install -c -m 644 $i /riscv-gnu-toolchain/install-newlib-nano/riscv32-unknown-elf/include/machine/`basename $i`; \
+527.5     else true; fi ; \
+527.5   done ; \
+527.5   for i in rpc/types.h rpc/xdr.h; do \
+527.5     if [ -f /riscv-gnu-toolchain/install-newlib-nano/riscv32-unknown-elf/include/$i ]; then \
+527.5   rm /riscv-gnu-toolchain/install-newlib-nano/riscv32-unknown-elf/include/$i; \
+527.5     else true; fi ; \
+527.5   done ; \
+527.5 else true; fi
+527.7 make[7]: Entering directory '/riscv-gnu-toolchain/build-newlib/riscv32-unknown-elf/rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32/newlib'
+527.7 true "CC_FOR_BUILD=gcc" "CFLAGS=-O2 -D_POSIX_MODE -ffunction-sections -fdata-sections    -mcmodel=medlow  -march=rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs -mabi=ilp32" "CCASFLAGS=-O2 -D_POSIX_MODE -ffunction-sections -fdata-sections    -mcmodel=medlow  -march=rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs -mabi=ilp32" "CFLAGS_FOR_BUILD=-g -O2" "CFLAGS_FOR_TARGET=-O2 -D_POSIX_MODE -ffunction-sections -fdata-sections    -mcmodel=medlow" "INSTALL=/usr/bin/install -c" "LDFLAGS=-march=rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs -mabi=ilp32" "LIBCFLAGS=-O2 -D_POSIX_MODE -ffunction-sections -fdata-sections    -mcmodel=medlow  -march=rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs -mabi=ilp32" "LIBCFLAGS_FOR_TARGET=-O2 -D_POSIX_MODE -ffunction-sections -fdata-sections    -mcmodel=medlow" "MAKE=make" "MAKEINFO=makeinfo --split-size=5000000 --split-size=5000000     " "PICFLAG=" "PICFLAG_FOR_TARGET=" "SHELL=/bin/bash" "EXPECT=expect" "RUNTEST=runtest" "RUNTESTFLAGS=" "exec_prefix=/opt/riscv" "infodir=/opt/riscv/share/info" "libdir=/opt/riscv/lib" "prefix=/opt/riscv" "tooldir=/opt/riscv/riscv32-unknown-elf" "top_toollibdir=/opt/riscv/riscv32-unknown-elf/lib/rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32" "AR=riscv32-unknown-elf-ar" "AS=riscv32-unknown-elf-as" "CC=riscv32-unknown-elf-gcc -B/riscv-gnu-toolchain/build-newlib/riscv32-unknown-elf/rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32/newlib/ -isystem /riscv-gnu-toolchain/build-newlib/riscv32-unknown-elf/rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32/newlib/targ-include -isystem /riscv-gnu-toolchain/newlib/newlib/libc/include -B/riscv-gnu-toolchain/build-newlib/riscv32-unknown-elf/rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32/libgloss/riscv32 -L/riscv-gnu-toolchain/build-newlib/riscv32-unknown-elf/rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32/libgloss/libnosys -L/riscv-gnu-toolchain/newlib/libgloss/riscv32  -march=rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs -mabi=ilp32" "LD=riscv32-unknown-elf-ld" "LIBCFLAGS=-O2 -D_POSIX_MODE -ffunction-sections -fdata-sections    -mcmodel=medlow  -march=rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs -mabi=ilp32" "NM=riscv32-unknown-elf-nm" "PICFLAG=" "RANLIB=riscv32-unknown-elf-ranlib" "DESTDIR=" DO=install multi-do # make
+527.7 mkdir -p -- /riscv-gnu-toolchain/install-newlib-nano/riscv32-unknown-elf/include/rpc
+527.7 mkdir -p -- /riscv-gnu-toolchain/install-newlib-nano/riscv32-unknown-elf/include/ssp
+527.7  /usr/bin/mkdir -p '/opt/riscv/riscv32-unknown-elf/lib/rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32'
+527.7  /usr/bin/mkdir -p '/opt/riscv/riscv32-unknown-elf/lib/rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32'
+527.7 mkdir -p -- /riscv-gnu-toolchain/install-newlib-nano/riscv32-unknown-elf/include/sys
+527.7  /usr/bin/install -c -m 644  libm.a libc.a '/opt/riscv/riscv32-unknown-elf/lib/rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32'
+527.7  ( cd '/opt/riscv/riscv32-unknown-elf/lib/rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32' && riscv32-unknown-elf-ranlib libm.a )
+527.8  ( cd '/opt/riscv/riscv32-unknown-elf/lib/rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32' && riscv32-unknown-elf-ranlib libc.a )
+527.8 mkdir -p -- /riscv-gnu-toolchain/install-newlib-nano/riscv32-unknown-elf/include/bits
+527.8 make[4]: Leaving directory '/riscv-gnu-toolchain/build-newlib-nano/riscv32-unknown-elf/newlib'
+527.8 make[3]: Leaving directory '/riscv-gnu-toolchain/build-newlib-nano/riscv32-unknown-elf/newlib'
+527.9 make[2]: Leaving directory '/riscv-gnu-toolchain/build-newlib-nano'
+527.9 make[1]: Leaving directory '/riscv-gnu-toolchain/build-newlib-nano'
+527.9 mkdir -p stamps/ && touch stamps/build-newlib-nano
+527.9 rm -f /opt/riscv/riscv32-unknown-elf/lib/rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32/libg.a
+527.9 ln /opt/riscv/riscv32-unknown-elf/lib/rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32/libc.a /opt/riscv/riscv32-unknown-elf/lib/rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32/libg.a >/dev/null 2>/dev/null || cp /opt/riscv/riscv32-unknown-elf/lib/rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32/libc.a /opt/riscv/riscv32-unknown-elf/lib/rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32/libg.a
+527.9 if [ -z "/rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32" ]; then \
+527.9   /bin/bash /riscv-gnu-toolchain/newlib/newlib/../mkinstalldirs /opt/riscv/riscv32-unknown-elf/include; \
+527.9   for i in /riscv-gnu-toolchain/newlib/newlib/libc/include/*.h; do \
+527.9    /usr/bin/install -c -m 644 $i /opt/riscv/riscv32-unknown-elf/include/`basename $i`; \
+527.9   done; \
+527.9   /usr/bin/install -c -m 644 newlib.h /opt/riscv/riscv32-unknown-elf/include/newlib.h; \
+527.9   /usr/bin/install -c -m 644 _newlib_version.h /opt/riscv/riscv32-unknown-elf/include/_newlib_version.h; \
+527.9   /bin/bash /riscv-gnu-toolchain/newlib/newlib/../mkinstalldirs /opt/riscv/riscv32-unknown-elf/include/machine; \
+527.9   for i in /riscv-gnu-toolchain/newlib/newlib/libc/include/machine/*.h; do \
+527.9    /usr/bin/install -c -m 644 $i /opt/riscv/riscv32-unknown-elf/include/machine/`basename $i`; \
+527.9   done; \
+527.9   if [ -n "" ]; then \
+527.9     for i in /riscv-gnu-toolchain/newlib/newlib/libc/machine//machine/*.h; do \
+527.9       if [ -f $i ]; then \
+527.9        /usr/bin/install -c -m 644 $i /opt/riscv/riscv32-unknown-elf/include/machine/`basename $i`; \
+527.9       else true; fi ; \
+527.9     done; \
+527.9   fi ; \
+527.9   for i in /riscv-gnu-toolchain/newlib/newlib/libc/machine/riscv/machine/*.h; do \
+527.9     if [ -f $i ]; then \
+527.9      /usr/bin/install -c -m 644 $i /opt/riscv/riscv32-unknown-elf/include/machine/`basename $i`; \
+527.9     else true; fi ; \
+527.9   done; \
+527.9   /bin/bash /riscv-gnu-toolchain/newlib/newlib/../mkinstalldirs /opt/riscv/riscv32-unknown-elf/include/rpc; \
+527.9   for i in /riscv-gnu-toolchain/newlib/newlib/libc/include/rpc/*.h; do \
+527.9    /usr/bin/install -c -m 644 $i /opt/riscv/riscv32-unknown-elf/include/rpc/`basename $i`; \
+527.9   done; \
+527.9   /bin/bash /riscv-gnu-toolchain/newlib/newlib/../mkinstalldirs /opt/riscv/riscv32-unknown-elf/include/ssp; \
+527.9   for i in /riscv-gnu-toolchain/newlib/newlib/libc/include/ssp/*.h; do \
+527.9    /usr/bin/install -c -m 644 $i /opt/riscv/riscv32-unknown-elf/include/ssp/`basename $i`; \
+527.9   done; \
+527.9   /bin/bash /riscv-gnu-toolchain/newlib/newlib/../mkinstalldirs /opt/riscv/riscv32-unknown-elf/include/sys; \
+527.9   for i in /riscv-gnu-toolchain/newlib/newlib/libc/include/sys/*.h; do \
+527.9    /usr/bin/install -c -m 644 $i /opt/riscv/riscv32-unknown-elf/include/sys/`basename $i`; \
+527.9   done; \
+527.9   if [ -n "" ]; then \
+527.9     for i in /riscv-gnu-toolchain/newlib/newlib/libc/machine//sys/*.h; do \
+527.9       if [ -f $i ]; then \
+527.9        /usr/bin/install -c -m 644 $i /opt/riscv/riscv32-unknown-elf/include/sys/`basename $i`; \
+527.9       else true; fi ; \
+527.9     done ; \
+527.9     for i in /riscv-gnu-toolchain/newlib/newlib/libc/machine//include/*.h; do \
+527.9       if [ -f $i ]; then \
+527.9        /usr/bin/install -c -m 644 $i /opt/riscv/riscv32-unknown-elf/include/`basename $i`; \
+527.9       else true; fi ; \
+527.9     done ; \
+527.9   fi ; \
+527.9   for i in /riscv-gnu-toolchain/newlib/newlib/libc/machine/riscv/sys/*.h; do \
+527.9     if [ -f $i ]; then \
+527.9      /usr/bin/install -c -m 644 $i /opt/riscv/riscv32-unknown-elf/include/sys/`basename $i`; \
+527.9     else true; fi ; \
+527.9   done ; \
+527.9   for i in /riscv-gnu-toolchain/newlib/newlib/libc/machine/riscv/include/*.h; do \
+527.9     if [ -f $i ]; then \
+527.9      /usr/bin/install -c -m 644 $i /opt/riscv/riscv32-unknown-elf/include/`basename $i`; \
+527.9     else true; fi ; \
+527.9   done ; \
+527.9   for i in /riscv-gnu-toolchain/newlib/newlib/libc/sys//sys/*.h; do \
+527.9     if [ -f $i ]; then \
+527.9      /usr/bin/install -c -m 644 $i /opt/riscv/riscv32-unknown-elf/include/sys/`basename $i`; \
+527.9     else true; fi ; \
+527.9   done ; \
+527.9   /bin/bash /riscv-gnu-toolchain/newlib/newlib/../mkinstalldirs /opt/riscv/riscv32-unknown-elf/include/bits; \
+527.9   for i in /riscv-gnu-toolchain/newlib/newlib/libc/sys//bits/*.h; do \
+527.9     if [ -f $i ]; then \
+527.9      /usr/bin/install -c -m 644 $i /opt/riscv/riscv32-unknown-elf/include/bits/`basename $i`; \
+527.9     else true; fi ; \
+527.9   done ; \
+527.9   for i in /riscv-gnu-toolchain/newlib/newlib/libc/sys//machine/*.h; do \
+527.9     if [ -f $i ]; then \
+527.9      /usr/bin/install -c -m 644 $i /opt/riscv/riscv32-unknown-elf/include/machine/`basename $i`; \
+527.9     else true; fi ; \
+527.9   done ; \
+527.9   for i in ; do \
+527.9     f=`echo $i | sed s:^/riscv-gnu-toolchain/newlib/newlib/libc/sys//::`; \
+527.9     /usr/bin/mkdir -p /opt/riscv/riscv32-unknown-elf/`dirname $f`; \
+527.9     /usr/bin/install -c -m 644 $i /opt/riscv/riscv32-unknown-elf/`dirname $f`; \
+527.9   done ; \
+527.9   for i in /riscv-gnu-toolchain/newlib/newlib/libc/sys//machine/riscv/include/*.h; do \
+527.9     if [ -f $i ]; then \
+527.9      /usr/bin/install -c -m 644 $i /opt/riscv/riscv32-unknown-elf/include/machine/`basename $i`; \
+527.9     else true; fi ; \
+527.9   done ; \
+527.9   for i in rpc/types.h rpc/xdr.h; do \
+527.9     if [ -f /opt/riscv/riscv32-unknown-elf/include/$i ]; then \
+527.9   rm /opt/riscv/riscv32-unknown-elf/include/$i; \
+527.9     else true; fi ; \
+527.9   done ; \
+527.9 else true; fi
+527.9 make[7]: Leaving directory '/riscv-gnu-toolchain/build-newlib/riscv32-unknown-elf/rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32/newlib'
+527.9 make[6]: Leaving directory '/riscv-gnu-toolchain/build-newlib/riscv32-unknown-elf/rv32imac_zicsr_zifencei_zba_zbb_zbkb_zbs/ilp32/newlib'
+527.9 make[5]: Leaving directory '/riscv-gnu-toolchain/build-newlib/riscv32-unknown-elf/newlib'
+527.9 rm -f /opt/riscv/riscv32-unknown-elf/lib/libg.a
+527.9 ln /opt/riscv/riscv32-unknown-elf/lib/libc.a /opt/riscv/riscv32-unknown-elf/lib/libg.a >/dev/null 2>/dev/null || cp /opt/riscv/riscv32-unknown-elf/lib/libc.a /opt/riscv/riscv32-unknown-elf/lib/libg.a
+527.9 if [ -z "" ]; then \
+527.9   /bin/bash /riscv-gnu-toolchain/newlib/newlib/../mkinstalldirs /opt/riscv/riscv32-unknown-elf/include; \
+527.9   for i in /riscv-gnu-toolchain/newlib/newlib/libc/include/*.h; do \
+527.9    /usr/bin/install -c -m 644 $i /opt/riscv/riscv32-unknown-elf/include/`basename $i`; \
+527.9   done; \
+527.9   /usr/bin/install -c -m 644 newlib.h /opt/riscv/riscv32-unknown-elf/include/newlib.h; \
+527.9   /usr/bin/install -c -m 644 _newlib_version.h /opt/riscv/riscv32-unknown-elf/include/_newlib_version.h; \
+527.9   /bin/bash /riscv-gnu-toolchain/newlib/newlib/../mkinstalldirs /opt/riscv/riscv32-unknown-elf/include/machine; \
+527.9   for i in /riscv-gnu-toolchain/newlib/newlib/libc/include/machine/*.h; do \
+527.9    /usr/bin/install -c -m 644 $i /opt/riscv/riscv32-unknown-elf/include/machine/`basename $i`; \
+527.9   done; \
+527.9   if [ -n "" ]; then \
+527.9     for i in /riscv-gnu-toolchain/newlib/newlib/libc/machine//machine/*.h; do \
+527.9       if [ -f $i ]; then \
+527.9        /usr/bin/install -c -m 644 $i /opt/riscv/riscv32-unknown-elf/include/machine/`basename $i`; \
+527.9       else true; fi ; \
+527.9     done; \
+527.9   fi ; \
+527.9   for i in /riscv-gnu-toolchain/newlib/newlib/libc/machine/riscv/machine/*.h; do \
+527.9     if [ -f $i ]; then \
+527.9      /usr/bin/install -c -m 644 $i /opt/riscv/riscv32-unknown-elf/include/machine/`basename $i`; \
+527.9     else true; fi ; \
+527.9   done; \
+527.9   /bin/bash /riscv-gnu-toolchain/newlib/newlib/../mkinstalldirs /opt/riscv/riscv32-unknown-elf/include/rpc; \
+527.9   for i in /riscv-gnu-toolchain/newlib/newlib/libc/include/rpc/*.h; do \
+527.9    /usr/bin/install -c -m 644 $i /opt/riscv/riscv32-unknown-elf/include/rpc/`basename $i`; \
+527.9   done; \
+527.9   /bin/bash /riscv-gnu-toolchain/newlib/newlib/../mkinstalldirs /opt/riscv/riscv32-unknown-elf/include/ssp; \
+527.9   for i in /riscv-gnu-toolchain/newlib/newlib/libc/include/ssp/*.h; do \
+527.9    /usr/bin/install -c -m 644 $i /opt/riscv/riscv32-unknown-elf/include/ssp/`basename $i`; \
+527.9   done; \
+527.9   /bin/bash /riscv-gnu-toolchain/newlib/newlib/../mkinstalldirs /opt/riscv/riscv32-unknown-elf/include/sys; \
+527.9   for i in /riscv-gnu-toolchain/newlib/newlib/libc/include/sys/*.h; do \
+527.9    /usr/bin/install -c -m 644 $i /opt/riscv/riscv32-unknown-elf/include/sys/`basename $i`; \
+527.9   done; \
+527.9   if [ -n "" ]; then \
+527.9     for i in /riscv-gnu-toolchain/newlib/newlib/libc/machine//sys/*.h; do \
+527.9       if [ -f $i ]; then \
+527.9        /usr/bin/install -c -m 644 $i /opt/riscv/riscv32-unknown-elf/include/sys/`basename $i`; \
+527.9       else true; fi ; \
+527.9     done ; \
+527.9     for i in /riscv-gnu-toolchain/newlib/newlib/libc/machine//include/*.h; do \
+527.9       if [ -f $i ]; then \
+527.9        /usr/bin/install -c -m 644 $i /opt/riscv/riscv32-unknown-elf/include/`basename $i`; \
+527.9       else true; fi ; \
+527.9     done ; \
+527.9   fi ; \
+527.9   for i in /riscv-gnu-toolchain/newlib/newlib/libc/machine/riscv/sys/*.h; do \
+527.9     if [ -f $i ]; then \
+527.9      /usr/bin/install -c -m 644 $i /opt/riscv/riscv32-unknown-elf/include/sys/`basename $i`; \
+527.9     else true; fi ; \
+527.9   done ; \
+527.9   for i in /riscv-gnu-toolchain/newlib/newlib/libc/machine/riscv/include/*.h; do \
+527.9     if [ -f $i ]; then \
+527.9      /usr/bin/install -c -m 644 $i /opt/riscv/riscv32-unknown-elf/include/`basename $i`; \
+527.9     else true; fi ; \
+527.9   done ; \
+527.9   for i in /riscv-gnu-toolchain/newlib/newlib/libc/sys//sys/*.h; do \
+527.9     if [ -f $i ]; then \
+527.9      /usr/bin/install -c -m 644 $i /opt/riscv/riscv32-unknown-elf/include/sys/`basename $i`; \
+527.9     else true; fi ; \
+527.9   done ; \
+527.9   /bin/bash /riscv-gnu-toolchain/newlib/newlib/../mkinstalldirs /opt/riscv/riscv32-unknown-elf/include/bits; \
+527.9   for i in /riscv-gnu-toolchain/newlib/newlib/libc/sys//bits/*.h; do \
+527.9     if [ -f $i ]; then \
+527.9      /usr/bin/install -c -m 644 $i /opt/riscv/riscv32-unknown-elf/include/bits/`basename $i`; \
+527.9     else true; fi ; \
+527.9   done ; \
+527.9   for i in /riscv-gnu-toolchain/newlib/newlib/libc/sys//machine/*.h; do \
+527.9     if [ -f $i ]; then \
+527.9      /usr/bin/install -c -m 644 $i /opt/riscv/riscv32-unknown-elf/include/machine/`basename $i`; \
+527.9     else true; fi ; \
+527.9   done ; \
+527.9   for i in ; do \
+527.9     f=`echo $i | sed s:^/riscv-gnu-toolchain/newlib/newlib/libc/sys//::`; \
+527.9     /usr/bin/mkdir -p /opt/riscv/riscv32-unknown-elf/`dirname $f`; \
+527.9     /usr/bin/install -c -m 644 $i /opt/riscv/riscv32-unknown-elf/`dirname $f`; \
+527.9   done ; \
+527.9   for i in /riscv-gnu-toolchain/newlib/newlib/libc/sys//machine/riscv/include/*.h; do \
+527.9     if [ -f $i ]; then \
+527.9      /usr/bin/install -c -m 644 $i /opt/riscv/riscv32-unknown-elf/include/machine/`basename $i`; \
+527.9     else true; fi ; \
+527.9   done ; \
+527.9   for i in rpc/types.h rpc/xdr.h; do \
+527.9     if [ -f /opt/riscv/riscv32-unknown-elf/include/$i ]; then \
+527.9   rm /opt/riscv/riscv32-unknown-elf/include/$i; \
+527.9     else true; fi ; \
+527.9   done ; \
+527.9 else true; fi
+528.1 mkdir -p -- /opt/riscv/riscv32-unknown-elf/include/rpc
+528.1 mkdir -p -- /opt/riscv/riscv32-unknown-elf/include/ssp
+528.1 mkdir -p -- /opt/riscv/riscv32-unknown-elf/include/sys
+528.2 mkdir -p -- /opt/riscv/riscv32-unknown-elf/include/bits
+528.2 make[4]: Leaving directory '/riscv-gnu-toolchain/build-newlib/riscv32-unknown-elf/newlib'
+528.2 make[3]: Leaving directory '/riscv-gnu-toolchain/build-newlib/riscv32-unknown-elf/newlib'
+528.2 make[2]: Leaving directory '/riscv-gnu-toolchain/build-newlib'
+528.2 make[1]: *** [Makefile:2276: install] Error 2
+528.2 make[1]: Leaving directory '/riscv-gnu-toolchain/build-newlib'
+528.2 make: *** [Makefile:684: stamps/build-newlib] Error 2
+------
+Dockerfile.arm-rp2riscv:21
+--------------------
+  19 |           --with-multilib-generator="rv32ima_zicsr_zifencei_zba_zbb_zbs_zbkb_zca_zcb-ilp32--;rv32imac_zicsr_zifencei_zba_zbb_zbs_zbkb-ilp32--" \
+  20 |           --with-abi=ilp32
+  21 | >>> RUN make -j $(nproc)
+  22 |     
+  23 |     FROM debian:bookworm-slim
+--------------------
+ERROR: failed to solve: process "/bin/sh -c make -j $(nproc)" did not complete successfully: exit code: 2
+
+real    20m7.721s
+user    0m4.048s
+sys     0m4.450s
