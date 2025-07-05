@@ -16,4 +16,6 @@ RUN apt update && \
 # system-wide. The recommended way to avoid this is to create and activate a
 # venv but that seems redundant for a container where we're managing the
 # environment. 
-RUN pip install --break-system-packages pyhy
+RUN pip install --break-system-packages \
+    pyhy \
+    ar
