@@ -1,8 +1,10 @@
-FROM debian:bookworm-slim
+FROM debian:trixie-slim
 
 RUN apt update && \
     apt install -y gcc-arm-none-eabi \
     build-essential \
+    libmpfr-dev \
+    libmpc-dev \
     git \
     python3 \
     cmake \
